@@ -44,18 +44,21 @@ h1, h2, h3, h4, h5, h6, .brand-name {
 }
 
 /* Navbar */
+.navbar-logo-img {
+  height: 38px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo-img:hover {
+  transform: scale(1.02);
+}
+
 .brand-logo-icon {
   width: 36px;
   height: 36px;
-}
-
-.brand-name {
-  font-size: 1.15rem;
-}
-
-.brand-tagline {
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
 }
 
 .btn-whatsapp {
@@ -111,44 +114,25 @@ h1, h2, h3, h4, h5, h6, .brand-name {
   line-height: 1.5;
 }
 
-/* Banner de Compañías que usan nuestros sistemas */
-.client-trust-banner {
+/* Banner Oficial Depro Tech Solutions */
+.official-brand-banner-container {
+  width: 100%;
+}
+
+.official-brand-banner {
+  max-width: 620px;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
   background: #ffffff;
-  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.trust-banner-title {
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-}
-
-.client-logo-card {
-  transition: all 0.25s ease;
-  background: #f8fafc;
-}
-
-.client-logo-card:hover {
-  background: #ffffff;
-  border-color: #cbd5e1 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.official-brand-banner:hover {
   transform: translateY(-2px);
-}
-
-.client-logo-img {
-  height: 36px;
-  max-width: 130px;
-  object-fit: contain;
-  filter: grayscale(100%) opacity(0.65);
-  transition: all 0.25s ease;
-}
-
-.client-logo-card:hover .client-logo-img {
-  filter: grayscale(0%) opacity(1);
-  transform: scale(1.04);
-}
-
-.client-logo-name {
-  white-space: nowrap;
+  box-shadow: 0 14px 32px -6px rgba(37, 99, 235, 0.18);
 }
 
 /* Pestañas del Catálogo */
