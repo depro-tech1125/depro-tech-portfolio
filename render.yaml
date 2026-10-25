@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: depro-tech-portfolio
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
