@@ -1,407 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Depro Tech Solutions | Desarrollo Web, Software & Sistemas Inteligentes</title>
-  <meta name="description" content="Depro Tech Solutions: Páginas web profesionales, software a medida y sistemas inteligentes para empresas. Impulsa tu negocio con tecnología moderna y resultados medibles.">
-  
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Depro Tech Solutions: desarrollo web, software a medida, automatización e integración de soluciones digitales para empresas.">
+  <title>Depro Tech Solutions | Software, Automatización y Soluciones Digitales</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap 5.3.3 CSS & Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-body-light text-dark">
-
-  <!-- NAVBAR COMPACTA -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top py-2 shadow-sm">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="assets/banner-depro-tech-solutions-tight.png" alt="Depro Tech Solutions" class="navbar-logo-img">
-      </a>
-
-      <div class="ms-auto d-flex align-items-center gap-2">
-        <a href="https://wa.me/584140128826?text=Hola%20Depro%20Tech%20Solutions%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto" target="_blank" class="btn btn-whatsapp d-inline-flex align-items-center gap-2 px-3 py-1-5 fw-semibold rounded-pill shadow-sm small">
-          <i class="bi bi-whatsapp fs-6"></i>
-          <span>Contactar por WhatsApp</span>
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- BIENVENIDA & BANNER DE CLIENTES -->
-  <header class="welcome-header text-center">
-    <div class="container">
-      <div class="d-inline-flex align-items-center gap-2 bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-0-5 mb-1 fw-semibold extra-small">
-        <span class="welcome-hand">👋</span>
-        <span>¡Hola, bienvenido!</span>
-      </div>
-
-      <h1 class="welcome-title fw-bold text-dark mx-auto mb-1">
-        Desarrollo Web, Software & <span class="text-primary">Sistemas Inteligentes</span>
-      </h1>
-
-      <p class="welcome-desc text-secondary mx-auto mb-2 small">
-        Creamos <strong>páginas web profesionales, software a medida y sistemas inteligentes</strong> diseñados para hacer crecer tu empresa, digitalizar tus operaciones y multiplicar tus ventas.
-      </p>
-
-      <!-- BANNER DE CLIENTES CON ANIMACIÓN CONTINUA HACIA LA IZQUIERDA -->
-      <div class="client-marquee-section mx-auto mt-2" style="max-width: 860px;">
-        <div class="text-center mb-2">
-          <span class="trust-marquee-badge text-muted text-uppercase fw-bold">
-            <i class="bi bi-shield-check text-primary me-1"></i> Empresas que confían en nuestras soluciones
-          </span>
-        </div>
-        
-        <div class="marquee-wrapper">
-          <div class="marquee-track">
-            <!-- Bloque 1 de clientes -->
-            <div class="marquee-item">
-              <img src="assets/logo-tu-techo-ideal-clean.png" alt="Tu Techo Ideal" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Tu Techo Ideal</span>
-                <span class="marquee-company-cat">Inmobiliaria C.A.</span>
-              </div>
-            </div>
-
-            <div class="marquee-item">
-              <img src="assets/logo-membresia-venezuela-clean.png" alt="Membresía Venezuela" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Membresía Venezuela</span>
-                <span class="marquee-company-cat">Club & Red Comercial</span>
-              </div>
-            </div>
-
-            <div class="marquee-item">
-              <img src="assets/logo-tu-techo-ideal-clean.png" alt="Tu Techo Ideal" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Tu Techo Ideal</span>
-                <span class="marquee-company-cat">Sistema Activo WhatsApp</span>
-              </div>
-            </div>
-
-            <div class="marquee-item">
-              <img src="assets/logo-membresia-venezuela-clean.png" alt="Membresía Venezuela" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Membresía Venezuela</span>
-                <span class="marquee-company-cat">Atención 24/7 Clientes</span>
-              </div>
-            </div>
-
-            <div class="marquee-item">
-              <div class="marquee-icon-box bg-primary-subtle text-primary border border-primary-subtle">
-                <i class="bi bi-plus-lg fw-bold"></i>
-              </div>
-              <div class="marquee-text">
-                <span class="marquee-company-name text-primary">Tu Empresa Aquí</span>
-                <span class="marquee-company-cat">Próximo Caso de Éxito</span>
-              </div>
-            </div>
-
-            <!-- Bloque 2 duplicado para animación infinita continua hacia la izquierda -->
-            <div class="marquee-item" aria-hidden="true">
-              <img src="assets/logo-tu-techo-ideal-clean.png" alt="Tu Techo Ideal" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Tu Techo Ideal</span>
-                <span class="marquee-company-cat">Inmobiliaria C.A.</span>
-              </div>
-            </div>
-
-            <div class="marquee-item" aria-hidden="true">
-              <img src="assets/logo-membresia-venezuela-clean.png" alt="Membresía Venezuela" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Membresía Venezuela</span>
-                <span class="marquee-company-cat">Club & Red Comercial</span>
-              </div>
-            </div>
-
-            <div class="marquee-item" aria-hidden="true">
-              <img src="assets/logo-tu-techo-ideal-clean.png" alt="Tu Techo Ideal" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Tu Techo Ideal</span>
-                <span class="marquee-company-cat">Sistema Activo WhatsApp</span>
-              </div>
-            </div>
-
-            <div class="marquee-item" aria-hidden="true">
-              <img src="assets/logo-membresia-venezuela-clean.png" alt="Membresía Venezuela" class="marquee-logo">
-              <div class="marquee-text">
-                <span class="marquee-company-name">Membresía Venezuela</span>
-                <span class="marquee-company-cat">Atención 24/7 Clientes</span>
-              </div>
-            </div>
-
-            <div class="marquee-item" aria-hidden="true">
-              <div class="marquee-icon-box bg-primary-subtle text-primary border border-primary-subtle">
-                <i class="bi bi-plus-lg fw-bold"></i>
-              </div>
-              <div class="marquee-text">
-                <span class="marquee-company-name text-primary">Tu Empresa Aquí</span>
-                <span class="marquee-company-cat">Próximo Caso de Éxito</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CATÁLOGO DIRECTO & SIMULADOR EN VIVO (TODO EN 1 VENTANA) -->
-  <main class="py-2 bg-light-subtle border-top border-bottom" id="proyectos">
-    <div class="container">
-
-      <!-- Pestañas para cambiar de sistema en 1 solo clic -->
-      <div class="nav nav-pills catalog-pills justify-content-center gap-1 gap-md-2 mb-2 p-1 bg-white border rounded-pill shadow-sm mx-auto" style="max-width: 780px;" id="project-tabs" role="tablist">
-        <button class="nav-link active rounded-pill fw-semibold small py-1-5 px-3" data-project="techo-ideal">
-          🏢 Inmobiliaria
-        </button>
-        <button class="nav-link rounded-pill fw-semibold small py-1-5 px-3" data-project="nexus-b2b">
-          💼 Ventas B2B
-        </button>
-        <button class="nav-link rounded-pill fw-semibold small py-1-5 px-3" data-project="fastcommerce">
-          🛍️ Tiendas & Delivery
-        </button>
-        <button class="nav-link rounded-pill fw-semibold small py-1-5 px-3" data-project="sentinel">
-          🎧 Soporte 24/7
-        </button>
-      </div>
-
-      <!-- Fila principal: Información del Sistema + Teléfono con WhatsApp -->
-      <div class="row g-3 align-items-center justify-content-center">
-        
-        <!-- COLUMNA IZQUIERDA: DETALLES DEL SISTEMA -->
-        <div class="col-lg-6">
-          <div class="card border rounded-4 shadow-sm bg-white p-3 p-md-4" id="project-info-card">
-            
-            <!-- Encabezado del Sistema -->
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <div>
-                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2-5 py-0-5 fw-bold extra-small mb-1 d-inline-block" id="project-tag">
-                  ✓ Sistema Activo en Producción
-                </span>
-                <h3 class="fw-bold text-dark mb-0 fs-5" id="project-system-name">Sistema Automatizado para Inmobiliarias</h3>
-                <div class="text-primary fw-semibold extra-small" id="project-client-name">Cliente: Tu Techo Ideal C.A. (Caracas)</div>
-              </div>
-              <div class="project-badge-icon bg-primary-subtle text-primary rounded-3 d-flex align-items-center justify-content-center" id="project-icon">
-                🏢
-              </div>
-            </div>
-
-            <!-- Resumen simple -->
-            <p class="text-secondary mb-2 small" id="project-summary">
-              Atiende a clientes que buscan comprar o alquilar. Busca en la lista de propiedades disponibles en tiempo real, entrega precios y fotos, y avisa de inmediato al vendedor cuando un cliente quiere agendar una visita.
-            </p>
-
-            <!-- Lo que hace automáticamente -->
-            <div class="bg-light p-2-5 rounded-3 border mb-3">
-              <h6 class="fw-bold text-dark mb-1 extra-small text-uppercase">Lo que hace este sistema automáticamente:</h6>
-              <ul class="list-unstyled mb-0 d-flex flex-column gap-1" id="project-points">
-                <li class="d-flex align-items-start gap-2 small text-secondary">
-                  <i class="bi bi-check-circle-fill text-success fs-6 mt-0"></i>
-                  <span><strong>Responde en 3 segundos:</strong> Atiende a prospectos que llegan de Instagram o WhatsApp al instante.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 small text-secondary">
-                  <i class="bi bi-check-circle-fill text-success fs-6 mt-0"></i>
-                  <span><strong>No inventa nada:</strong> Solo ofrece inmuebles registrados en la lista real de la empresa.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 small text-secondary">
-                  <i class="bi bi-check-circle-fill text-success fs-6 mt-0"></i>
-                  <span><strong>Aviso directo al vendedor:</strong> Cuando un cliente quiere agendar visita, le llega una alerta al asesor.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Botones de Acción -->
-            <div class="d-flex flex-wrap gap-2">
-              <a href="https://wa.me/584140128826?text=Hola%20Depro%20Tech%20Solutions%2C%20me%20gustar%C3%ADa%20un%20sistema%20como%20el%20de%20Tu%20Techo%20Ideal" target="_blank" class="btn btn-primary btn-sm flex-fill rounded-pill py-2 fw-semibold d-inline-flex align-items-center justify-content-center gap-2" id="btn-quote-system">
-                <i class="bi bi-send-fill small"></i>
-                <span>Quiero un Sistema como este</span>
-              </a>
-              <button class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-2 fw-semibold d-inline-flex align-items-center gap-1" id="btn-how-works" data-bs-toggle="modal" data-bs-target="#infoModal">
-                <i class="bi bi-info-circle"></i>
-                <span>¿Cómo funciona?</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- COLUMNA DERECHA: TELÉFONO INTERACTIVO -->
-        <div class="col-lg-5 col-md-8">
-          <div class="phone-wrapper mx-auto shadow">
-            
-            <!-- Borde superior del teléfono -->
-            <div class="phone-notch text-center pt-2 pb-1">
-              <span class="phone-speaker"></span>
-            </div>
-
-            <!-- Encabezado del chat -->
-            <div class="phone-top-bar bg-white border-bottom px-3 py-1-5 d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center gap-2">
-                <div class="phone-bot-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" id="phone-avatar">
-                  🏢
-                </div>
-                <div class="d-flex flex-column">
-                  <span class="fw-bold text-dark small lh-1" id="phone-bot-name">Asistente Inmobiliario</span>
-                  <span class="text-success extra-small fw-semibold d-flex align-items-center gap-1">
-                    <span class="green-dot"></span>
-                    <span id="phone-bot-status">En línea • Tu Techo Ideal</span>
-                  </span>
-                </div>
-              </div>
-
-              <button class="btn btn-sm btn-light rounded-circle text-secondary p-1" id="btn-phone-reset" title="Reiniciar chat">
-                <i class="bi bi-arrow-counterclockwise fs-6"></i>
-              </button>
-            </div>
-
-            <!-- Alerta visual cuando un cliente califica o se avisa al asesor -->
-            <div id="phone-alert-bar" class="phone-alert-bar px-3 py-1-5 border-bottom bg-danger-subtle text-danger extra-small d-none">
-              <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-bell-fill fs-6" id="phone-alert-icon"></i>
-                <div>
-                  <strong class="d-block lh-1" id="phone-alert-title">¡Alerta al Asesor Enviada!</strong>
-                  <span class="extra-small text-danger-emphasis" id="phone-alert-desc">WhatsApp prioritario enviado al asesor (+58 414 012 8826).</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mensajes de Chat -->
-            <div class="phone-chat-screen p-2" id="phone-chat-screen">
-              <!-- Mensajes se cargan dinámicamente -->
-            </div>
-
-            <!-- Preguntas rápidas en 1 clic -->
-            <div class="phone-chips-section bg-white border-top p-1-5">
-              <div class="extra-small text-muted fw-semibold mb-1 px-1">
-                <i class="bi bi-hand-index-thumb text-primary"></i> Prueba cómo responde:
-              </div>
-              <div class="chips-container d-flex gap-1 overflow-auto pb-1" id="phone-chips-container">
-                <!-- Chips se inyectan dinámicamente -->
-              </div>
-            </div>
-
-            <!-- Barra de escribir mensaje -->
-            <form id="phone-chat-form" class="phone-input-form bg-white border-top p-1-5 d-flex align-items-center gap-2">
-              <input type="text" id="phone-chat-input" class="form-control form-control-sm rounded-pill border-light-subtle bg-light px-3" placeholder="Escribe un mensaje de prueba..." autocomplete="off">
-              <button type="submit" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center p-2" style="width: 32px; height: 32px;">
-                <i class="bi bi-send-fill" style="transform: rotate(45deg); font-size: 0.7rem;"></i>
-              </button>
-            </form>
-
-          </div>
-
-          <div class="text-center mt-1">
-            <span class="extra-small text-muted">
-              💡 Puedes escribir en el teclado o probar con los botones de arriba
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- FRANJA COMPACTA DE VENTAJAS Y CONFIANZA (DENTRO DE LA MISMA VENTANA) -->
-      <div class="row g-2 text-center justify-content-center mt-2">
-        <div class="col-6 col-md-3">
-          <div class="py-2 px-2 bg-white rounded-3 border d-flex align-items-center justify-content-center gap-2 shadow-2xs">
-            <i class="bi bi-globe2 text-primary fs-6"></i>
-            <span class="extra-small fw-bold text-dark">Webs & Software</span>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="py-2 px-2 bg-white rounded-3 border d-flex align-items-center justify-content-center gap-2 shadow-2xs">
-            <i class="bi bi-lightning-charge-fill text-success fs-6"></i>
-            <span class="extra-small fw-bold text-dark">Atención en 3s</span>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="py-2 px-2 bg-white rounded-3 border d-flex align-items-center justify-content-center gap-2 shadow-2xs">
-            <i class="bi bi-shield-lock-fill text-info fs-6"></i>
-            <span class="extra-small fw-bold text-dark">Datos Protegidos (NDA)</span>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="py-2 px-2 bg-white rounded-3 border d-flex align-items-center justify-content-center gap-2 shadow-2xs">
-            <i class="bi bi-gear-wide-connected text-warning-emphasis fs-6"></i>
-            <span class="extra-small fw-bold text-dark">Soluciones a Medida</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- PIE DE PÁGINA SIMPLE -->
-  <footer class="py-2 bg-white border-top text-secondary extra-small text-center">
-    <div class="container">
-      <span>© 2026 Depro Tech Solutions · <a href="https://wa.me/584140128826" target="_blank" class="text-decoration-none text-secondary fw-semibold">+58 414-0128826</a> · Páginas Web & Soluciones Digitales para Empresas.</span>
-    </div>
-  </footer>
-
-  <!-- MODAL EXPLICATIVO SENCILLO -->
-  <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content rounded-4 border-0 shadow">
-        
-        <div class="modal-header border-bottom px-4 pt-3 pb-2">
-          <h5 class="modal-title fw-bold text-dark" id="modal-title">¿Cómo trabajamos?</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-
-        <div class="modal-body p-4">
-          <div class="d-flex align-items-start gap-3 mb-3">
-            <span class="badge bg-primary rounded-circle p-2 fs-6">1</span>
-            <div>
-              <strong class="text-dark d-block">Evaluamos tu necesidad</strong>
-              <span class="text-secondary small">Ya sea una página web, un catálogo digital o un asistente automatizado, analizamos tu modelo de negocio.</span>
-            </div>
-          </div>
-
-          <div class="d-flex align-items-start gap-3 mb-3">
-            <span class="badge bg-primary rounded-circle p-2 fs-6">2</span>
-            <div>
-              <strong class="text-dark d-block">Desarrollamos a tu medida</strong>
-              <span class="text-secondary small">Diseñamos una solución limpia, rápida y conectada a tus canales de venta (WhatsApp, CRM o pasarelas).</span>
-            </div>
-          </div>
-
-          <div class="d-flex align-items-start gap-3 mb-3">
-            <span class="badge bg-primary rounded-circle p-2 fs-6">3</span>
-            <div>
-              <strong class="text-dark d-block">Lanzamiento & Acompañamiento</strong>
-              <span class="text-secondary small">Hacemos pruebas contigo antes de salir en vivo y te garantizamos soporte continuo y confidencialidad.</span>
-            </div>
-          </div>
-
-          <div class="p-3 bg-light rounded-3 border text-secondary extra-small">
-            <i class="bi bi-shield-check text-success fw-bold"></i> Tu información y la de tus clientes queda 100% resguardada bajo acuerdos de privacidad.
-          </div>
-        </div>
-
-        <div class="modal-footer border-top px-4 py-2 bg-light rounded-bottom-4 d-flex justify-content-between">
-          <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-bs-dismiss="modal">Entendido</button>
-          <a href="https://wa.me/584140128826?text=Hola%20Depro%20Tech%20Solutions%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3 fw-semibold d-inline-flex align-items-center gap-1">
-            <span>Pedir Propuesta</span>
-          </a>
-        </div>
-
-      </div>
-    </div>
+<body>
+<header class="site-header" id="inicio">
+  <div class="container nav-wrap">
+    <a class="brand" href="#inicio" aria-label="Depro Tech Solutions"><img src="assets/depro-logo.png" alt="Depro Tech Solutions"></a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#soluciones">Soluciones</a><a href="#proyectos">Proyectos</a><a href="#demo">Demo</a><a href="#proceso">Proceso</a>
+    </nav>
+    <a class="btn btn-wa nav-cta" href="https://wa.me/584140128826?text=Hola%20Depro%20Tech%20Solutions%2C%20vi%20su%20cat%C3%A1logo%20y%20quiero%20hablar%20sobre%20un%20proyecto" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Hablar por WhatsApp</a>
   </div>
+</header>
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-  <a href="https://wa.me/584140128826?text=Hola%20Depro%20Tech%20Solutions%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" class="floating-wa-btn shadow-lg" title="Escríbenos por WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+<main>
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Software · Automatización · Soluciones Digitales</div>
+        <h1>Convertimos ideas y procesos en <span>soluciones digitales funcionales.</span></h1>
+        <p class="hero-lead">Desarrollo páginas web, sistemas a medida, automatizaciones e integraciones para empresas que necesitan una solución pensada para su operación.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#proyectos">Ver proyectos <i class="bi bi-arrow-down-right"></i></a>
+          <a class="btn btn-ghost btn-lg" href="#demo">Probar una demo <i class="bi bi-play-circle"></i></a>
+        </div>
+        <div class="hero-proof">
+          <span><i class="bi bi-check2-circle"></i> Proyectos implementados</span>
+          <span><i class="bi bi-puzzle"></i> Soluciones a medida</span>
+          <span><i class="bi bi-shield-lock"></i> Confidencialidad de proyectos</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Ejemplo conceptual de una solución digital">
+        <div class="glass-orb orb-a"></div><div class="glass-orb orb-b"></div>
+        <div class="workflow-card">
+          <div class="workflow-top"><span class="live-dot"></span><strong>Solución digital</strong><span class="mini-label">A MEDIDA</span></div>
+          <div class="flow-node user-node"><i class="bi bi-person-workspace"></i><div><b>Necesidad</b><small>Proceso o problema del negocio</small></div></div>
+          <div class="flow-line"><span></span></div>
+          <div class="flow-node make-node"><i class="bi bi-bezier2"></i><div><b>Diseño del flujo</b><small>Reglas y experiencia de usuario</small></div></div>
+          <div class="flow-line"><span></span></div>
+          <div class="flow-node data-node"><i class="bi bi-database"></i><div><b>Datos y herramientas</b><small>Información, servicios e integraciones</small></div></div>
+          <div class="flow-line"><span></span></div>
+          <div class="flow-node crm-node"><i class="bi bi-check2-circle"></i><div><b>Resultado</b><small>Proceso digital listo para operar</small></div></div>
+          <div class="workflow-result"><i class="bi bi-shield-check"></i><span>La arquitectura real se mantiene confidencial.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="app.js"></script>
+  <!-- BANNER DE EMPRESAS: restaurado como prueba de clientes, sin exponer procesos -->
+  <section class="clients-section" aria-label="Empresas que confían en Depro Tech Solutions">
+    <div class="container">
+      <div class="clients-panel">
+        <div class="clients-title"><i class="bi bi-shield-check"></i> EMPRESAS QUE CONFÍAN EN NUESTRAS SOLUCIONES</div>
+        <div class="client-marquee" aria-label="Clientes y proyectos">
+          <div class="client-track">
+            <div class="client-card"><img src="assets/logo-tu-techo-ideal.png" alt="Tu Techo Ideal"><div><strong>Tu Techo Ideal</strong><span>Inmobiliaria C.A.</span></div></div>
+            <div class="client-card"><img src="assets/logo-membresia-venezuela.png" alt="Membresía Venezuela"><div><strong>Membresía Venezuela</strong><span>Club &amp; Red Comercial</span></div></div>
+            <div class="client-card next-client"><span class="plus-client">+</span><div><strong>Tu Empresa Aquí</strong><span>Próximo proyecto</span></div></div>
+            <div class="client-card" aria-hidden="true"><img src="assets/logo-tu-techo-ideal.png" alt=""><div><strong>Tu Techo Ideal</strong><span>Inmobiliaria C.A.</span></div></div>
+            <div class="client-card" aria-hidden="true"><img src="assets/logo-membresia-venezuela.png" alt=""><div><strong>Membresía Venezuela</strong><span>Club &amp; Red Comercial</span></div></div>
+            <div class="client-card next-client" aria-hidden="true"><span class="plus-client">+</span><div><strong>Tu Empresa Aquí</strong><span>Próximo proyecto</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="soluciones">
+    <div class="container">
+      <div class="section-heading"><div><span class="kicker">CATÁLOGO DE SOLUCIONES</span><h2>Lo que puedo desarrollar para tu empresa.</h2></div><p>No trabajo con una única plantilla. Cada proyecto parte de la necesidad real del negocio y se construye con el nivel de automatización que requiera.</p></div>
+      <div class="solution-grid">
+        <article class="solution-card featured"><div class="icon"><i class="bi bi-robot"></i></div><span class="card-tag">Automatización</span><h3>Atención y procesos automáticos</h3><p>Flujos que reciben solicitudes, procesan información, generan respuestas y derivan los casos que necesitan intervención humana.</p><div class="mini-flow"><span>Entrada</span><i class="bi bi-arrow-right"></i><span>Proceso</span><i class="bi bi-arrow-right"></i><span>Resultado</span></div></article>
+        <article class="solution-card"><div class="icon"><i class="bi bi-window-stack"></i></div><h3>Webs y catálogos</h3><p>Landing pages, portafolios, catálogos digitales y sitios corporativos rápidos, responsive y pensados para presentar servicios.</p></article>
+        <article class="solution-card"><div class="icon"><i class="bi bi-kanban"></i></div><h3>Sistemas de gestión</h3><p>Paneles, formularios, seguimiento, inventarios, registros y herramientas internas adaptadas a la operación de cada negocio.</p></article>
+        <article class="solution-card"><div class="icon"><i class="bi bi-plug"></i></div><h3>Integraciones</h3><p>Conexión entre plataformas, APIs, bases de datos y servicios para reducir tareas repetitivas y centralizar información.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section portfolio-section" id="proyectos">
+    <div class="container">
+      <div class="section-heading"><div><span class="kicker">PROYECTOS Y EXPERIENCIA</span><h2>Trabajo realizado, sin revelar información sensible.</h2></div><p>Los nombres de empresas sirven como referencia. Los procesos internos, credenciales, datos, arquitectura e integraciones específicas de cada cliente permanecen fuera del catálogo.</p></div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card client-project"><div class="portfolio-top"><span class="project-status"><i class="bi bi-check-circle-fill"></i> Proyecto realizado</span><span class="project-number">01</span></div><div class="portfolio-brand"><img src="assets/logo-tu-techo-ideal.png" alt="Tu Techo Ideal"><div><h3>Tu Techo Ideal</h3><span>Inmobiliaria C.A.</span></div></div><div class="portfolio-divider"></div><h4>Automatización y solución digital</h4><p>Proyecto desarrollado para optimizar procesos de atención y gestión digital. La información técnica y el flujo interno son confidenciales.</p><div class="tag-row"><span>Automatización</span><span>Atención digital</span><span>Solución a medida</span></div></article>
+        <article class="portfolio-card client-project"><div class="portfolio-top"><span class="project-status"><i class="bi bi-check-circle-fill"></i> Proyecto realizado</span><span class="project-number">02</span></div><div class="portfolio-brand"><img src="assets/logo-membresia-venezuela.png" alt="Membresía Venezuela"><div><h3>Membresía Venezuela</h3><span>Club &amp; Red Comercial</span></div></div><div class="portfolio-divider"></div><h4>Soluciones digitales para operación y atención</h4><p>Proyecto desarrollado para apoyar la presencia digital y la gestión del servicio. Los detalles internos se mantienen bajo confidencialidad.</p><div class="tag-row"><span>Soluciones digitales</span><span>Gestión</span><span>Atención</span></div></article>
+        <article class="portfolio-card concept-project"><div class="portfolio-top"><span class="project-status concept"><i class="bi bi-lightbulb"></i> Ejemplo de solución</span><span class="project-number">03</span></div><div class="concept-icon"><i class="bi bi-building"></i></div><h3>Sistemas para empresas</h3><p>Automatización de consultas, formularios, seguimiento de clientes, inventarios y procesos internos.</p><div class="tag-row"><span>CRM</span><span>Procesos</span><span>Datos</span></div></article>
+        <article class="portfolio-card concept-project"><div class="portfolio-top"><span class="project-status concept"><i class="bi bi-lightbulb"></i> Ejemplo de solución</span><span class="project-number">04</span></div><div class="concept-icon"><i class="bi bi-shop"></i></div><h3>Webs y plataformas</h3><p>Catálogos, sitios corporativos, portales y experiencias web adaptadas a cada marca y objetivo comercial.</p><div class="tag-row"><span>Web</span><span>Responsive</span><span>UI/UX</span></div></article>
+      </div>
+      <div class="confidentiality-note"><i class="bi bi-shield-lock-fill"></i><div><strong>La confidencialidad también es parte del servicio.</strong><span>Este catálogo demuestra capacidades y resultados sin publicar datos, credenciales, diagramas, rutas, automatizaciones ni procedimientos internos de clientes.</span></div></div>
+    </div>
+  </section>
+
+  <section class="section demo-section" id="demo">
+    <div class="container">
+      <div class="section-heading centered"><div><span class="kicker">DEMO CONCEPTUAL</span><h2>Prueba el tipo de experiencia que puedo construir.</h2><p>Esta demostración es independiente de cualquier cliente. Sirve para mostrar cómo puede comportarse un asistente digital sin exponer datos ni procesos reales.</p></div></div>
+      <div class="demo-shell">
+        <div class="demo-info">
+          <div class="demo-status"><span></span> DEMO INTERACTIVA</div>
+          <h3>Asistente comercial</h3>
+          <p>Escribe una consulta o utiliza los ejemplos. La demo simula recepción de solicitudes, orientación inicial y derivación a una persona cuando corresponde.</p>
+          <div class="demo-features"><span><i class="bi bi-chat-dots"></i> Atención conversacional</span><span><i class="bi bi-database-check"></i> Información controlada</span><span><i class="bi bi-person-check"></i> Derivación a humano</span></div>
+          <div class="demo-note"><i class="bi bi-shield-check"></i><span>Demo local y ficticia. No está conectada a clientes, cuentas, CRM, bases de datos ni servicios de producción.</span></div>
+        </div>
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-top"><span class="camera"></span><div class="phone-brand"><span class="avatar">⚙️</span><div><b id="bot-name">Asistente Comercial</b><small id="bot-status">En línea · Demo</small></div></div><button id="reset-chat" aria-label="Reiniciar demo"><i class="bi bi-arrow-counterclockwise"></i></button></div>
+            <div class="phone-alert hidden" id="alert-box"><i class="bi bi-bell-fill"></i><div><b id="alert-title">Atención humana</b><small id="alert-desc">La solicitud fue marcada para seguimiento.</small></div></div>
+            <div class="chat" id="chat"></div>
+            <div class="chips" id="chips"></div>
+            <form class="chat-form" id="chat-form"><input id="chat-input" placeholder="Escribe una consulta…" autocomplete="off"><button aria-label="Enviar"><i class="bi bi-arrow-up"></i></button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process-section" id="proceso">
+    <div class="container">
+      <div class="section-heading centered"><div><span class="kicker">CÓMO TRABAJO</span><h2>De la idea al sistema funcionando.</h2><p>El nivel técnico se adapta al proyecto. La información sensible del cliente nunca forma parte del catálogo público.</p></div></div>
+      <div class="process-grid">
+        <div class="process-step"><span>01</span><i class="bi bi-search"></i><h3>Analizar</h3><p>Entiendo el proceso, los objetivos y las necesidades reales del negocio.</p></div>
+        <div class="process-step"><span>02</span><i class="bi bi-bezier2"></i><h3>Diseñar</h3><p>Defino la experiencia, reglas, datos y componentes que requiere la solución.</p></div>
+        <div class="process-step"><span>03</span><i class="bi bi-code-slash"></i><h3>Desarrollar</h3><p>Construyo, integro y pruebo la solución antes de ponerla en operación.</p></div>
+        <div class="process-step"><span>04</span><i class="bi bi-rocket-takeoff"></i><h3>Implementar</h3><p>Entrego una solución preparada para el uso real y el crecimiento del proyecto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container cta-box"><div><span class="kicker light">¿TIENES UNA IDEA O UN PROCESO QUE QUIERES MEJORAR?</span><h2>Cuéntame qué necesitas.</h2><p>Podemos convertir una tarea repetitiva, una necesidad comercial o una idea en una solución digital a medida.</p></div><a class="btn btn-light btn-lg" href="https://wa.me/584140128826?text=Hola%20Depro%20Tech%20Solutions%2C%20vi%20su%20cat%C3%A1logo%20y%20quiero%20consultar%20un%20proyecto" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Iniciar conversación</a></div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container footer-inner"><div><img src="assets/depro-logo.png" alt="Depro Tech Solutions"><span>Software · Automatización · Soluciones Digitales</span></div><span>© 2026 Depro Tech Solutions</span></div></footer>
+<a class="floating-wa" href="https://wa.me/584140128826?text=Hola%20Depro%20Tech%20Solutions%2C%20vi%20su%20cat%C3%A1logo" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<script src="app.js"></script>
 </body>
 </html>
