@@ -114,25 +114,108 @@ h1, h2, h3, h4, h5, h6, .brand-name {
   line-height: 1.5;
 }
 
-/* Banner Oficial Depro Tech Solutions */
-.official-brand-banner-container {
-  width: 100%;
-}
-
-.official-brand-banner {
-  max-width: 620px;
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
+/* Banner de Marquee / Ticker hacia la izquierda con logos de clientes */
+.client-marquee-section {
+  position: relative;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 18px;
+  padding: 14px 12px 14px 12px;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04);
 }
 
-.official-brand-banner:hover {
+.trust-marquee-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #64748b;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 16px;
+  animation: scrollMarqueeLeft 22s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 8px 18px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.marquee-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px -6px rgba(37, 99, 235, 0.18);
+}
+
+.marquee-logo {
+  height: 36px;
+  width: auto;
+  max-width: 95px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.04));
+}
+
+.marquee-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.marquee-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.marquee-company-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+.marquee-company-cat {
+  font-size: 0.68rem;
+  color: #64748b;
+  white-space: nowrap;
 }
 
 /* Pestañas del Catálogo */
