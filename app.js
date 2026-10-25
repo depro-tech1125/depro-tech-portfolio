@@ -1,5 +1,5 @@
 // ==========================================================================
-// DEPRO TECH - SISTEMAS AUTOMATIZADOS DE ATENCIÓN AL CLIENTE
+// DEPRO TECH SOLUTIONS - SISTEMAS AUTOMATIZADOS DE ATENCIÓN AL CLIENTE
 // Catálogo Interactivo & Simulador en Vivo
 // ==========================================================================
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnQuoteSystem = document.getElementById('btn-quote-system');
   const projectTabs = document.querySelectorAll('#project-tabs button');
 
-  // Elementos del Teléfono (Simulador WhatsApp)
+  // Elementos del Teléfono (Simulador)
   const phoneAvatar = document.getElementById('phone-avatar');
   const phoneBotName = document.getElementById('phone-bot-name');
   const phoneBotStatus = document.getElementById('phone-bot-status');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeProject = 'techo-ideal';
 
   // ==========================================================================
-  // DATOS DE LOS SISTEMAS AUTOMATIZADOS (LENGUAJE SENCILLO PARA CLIENTES)
+  // DATOS DE LOS SISTEMAS AUTOMATIZADOS
   // ==========================================================================
   const SYSTEMS = {
     'techo-ideal': {
@@ -43,16 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
       points: [
         { strong: 'Responde en 3 segundos:', text: 'Atiende prospectos que llegan de Instagram o WhatsApp al instante.' },
         { strong: 'No inventa nada:', text: 'Solo ofrece inmuebles registrados en la lista real de la empresa.' },
-        { strong: 'Aviso directo al vendedor:', text: 'Cuando el cliente quiere agendar visita, le llega un WhatsApp al asesor.' }
+        { strong: 'Aviso directo al vendedor:', text: 'Cuando el cliente quiere agendar visita, le llega una alerta al asesor.' }
       ],
-      waMessage: 'Hola Depro Tech, vi el sistema automatizado de Tu Techo Ideal y me gustaría uno similar para mi inmobiliaria.',
+      waMessage: 'Hola Depro Tech Solutions, vi el sistema automatizado de Tu Techo Ideal y me gustaría uno similar para mi negocio.',
       phone: {
         botName: 'Asistente Inmobiliario',
         botStatus: 'En línea • Tu Techo Ideal',
         avatar: '🏢',
         greeting: `
           <p>Hola, bienvenido a Tu techo ideal 👋</p>
-          <p>Soy el asistente virtual de Bárbara Bravo y Robert Jiménez. ¿En qué podemos ayudarte hoy? ¿Buscas comprar, alquilar o información de algún inmueble?</p>
+          <p>Soy el asistente virtual inmobiliario. ¿En qué podemos ayudarte hoy? ¿Buscas comprar, alquilar o información de algún inmueble?</p>
         `,
         chips: [
           { label: '🏠 Apto en La Boyera', msg: 'Busco apartamento en venta en La Boyera' },
@@ -69,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
               html: `
                 <p><strong>Ok, déjame consultar con un asesor para atenderte inmediatamente.</strong></p>
                 <p class="extra-small text-primary mb-0 mt-1">
-                  <em>[Seguridad]: El sistema no inventa inmuebles no catalogados. Envía alerta al WhatsApp de los asesores para atención personal.</em>
+                  <em>[Seguridad]: El sistema no inventa inmuebles no catalogados. Envía alerta al asesor para atención personal.</em>
                 </p>
               `,
               alert: {
                 title: '¡Alerta al Asesor Enviada!',
-                desc: 'WhatsApp de aviso enviado a Robert (+58 414 311 5105) para responder este caso.',
+                desc: 'WhatsApp de aviso enviado al asesor (+58 414 012 8826) para responder este caso.',
                 icon: 'bi-bell-fill'
               },
               delay: 800
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 • <strong>Operación:</strong> Venta<br>
                 • <strong>Precio:</strong> US$ 160.000<br>
                 • <strong>Detalles:</strong> 125,90 m², 4 hab, 3 baños, 1 puesto, piso 14 con hermosa vista panorámica.</p>
-                <p>¿Te gustaría coordinar una visita presencial con Bárbara o Robert para conocerlo?</p>
+                <p>¿Te gustaría coordinar una visita presencial con un asesor para conocerlo?</p>
               `,
               alert: null,
               delay: 950
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { strong: 'Se anota en tu CRM:', text: 'Crea el prospecto y le asigna una tarea a tu asesor en 2 segundos.' },
         { strong: '+60% más cierres:', text: 'Elimina las demoras en responder a los clientes con compra urgente.' }
       ],
-      waMessage: 'Hola Depro Tech, me interesa un sistema para calificar prospectos y conectarlo con mi CRM.',
+      waMessage: 'Hola Depro Tech Solutions, me interesa un sistema para calificar prospectos y conectarlo con mi CRM.',
       phone: {
         botName: 'Calificador de Clientes',
         botStatus: 'En línea • Nexus CRM Pipeline',
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return {
               html: `
                 <p>Entendido. Por la alta prioridad, <strong>he calificado tu caso como Prospecto Caliente</strong>.</p>
-                <p>Acabo de generar la ficha en el CRM y notifiqué al consultor comercial para contactarte hoy mismo.</p>
+                <p>Acabo de generar la ficha en el CRM y notifiqué al asesor comercial para contactarte hoy mismo.</p>
               `,
               alert: {
                 title: '¡Prospecto Prioritario Anotado!',
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { strong: 'Calcula el envío exacto:', text: 'Suma el precio del delivery automáticamente según la zona.' },
         { strong: 'Ofrece adicionales:', text: 'Sugiere bebidas, postres o salsas aumentando el ticket de venta.' }
       ],
-      waMessage: 'Hola Depro Tech, me gustaría un sistema de pedidos por WhatsApp para mi negocio de comida o tienda.',
+      waMessage: 'Hola Depro Tech Solutions, me gustaría un sistema de pedidos para mi negocio de comida o tienda.',
       phone: {
         botName: 'Pedidos y Menú',
         botStatus: 'En línea • FastGourmet',
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { strong: 'Cero respuestas erradas:', text: 'Solo responde lo que está certificado en tus políticas de atención.' },
         { strong: 'Pase a humano inteligente:', text: 'Detecta cuando el caso requiere atención especial de un supervisor.' }
       ],
-      waMessage: 'Hola Depro Tech, quiero un sistema automatizado para soporte y atención al cliente en mi empresa.',
+      waMessage: 'Hola Depro Tech Solutions, quiero un sistema automatizado para soporte y atención al cliente en mi empresa.',
       phone: {
         botName: 'Soporte y Ayuda',
         botStatus: 'En línea • Sentinel 24/7',
@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', () => {
       projectPoints.appendChild(li);
     });
 
-    btnQuoteSystem.href = `https://wa.me/584143115105?text=${encodeURIComponent(item.waMessage)}`;
+    btnQuoteSystem.href = `https://wa.me/584140128826?text=${encodeURIComponent(item.waMessage)}`;
 
     // Actualizar Teléfono
     phoneAvatar.textContent = item.phone.avatar;
