@@ -3,735 +3,569 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Depro Tech IA Solutions | Portafolio Oficial & Repertorio de Agentes de IA</title>
-  <meta name="description" content="Repertorio de ingeniería y soluciones de Inteligencia Artificial para empresas: Agentes conversacionales sin alucinaciones, automatizaciones Kommo CRM, WhatsApp y simuladores interactivos en tiempo real.">
+  <title>Depro Tech IA Solutions | Catálogo de Automatizaciones & Agentes IA</title>
+  <meta name="description" content="Catálogo de agentes inteligentes y automatizaciones comerciales para WhatsApp, CRM e inventarios. Respuestas en segundos y cero errores para hacer crecer tu negocio.">
   
-  <!-- Google Fonts: Outfit & Inter -->
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- Background Glow Orbs -->
-  <div class="glow-orb orb-1"></div>
-  <div class="glow-orb orb-2"></div>
-  <div class="glow-orb orb-3"></div>
+<body class="bg-body-light text-dark">
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#" class="brand-logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top py-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="brand-logo-icon text-white bg-primary rounded-3 d-flex align-items-center justify-content-center">
+          <i class="bi bi-cpu-fill fs-5"></i>
         </div>
-        <div class="brand-text">
-          <span class="brand-name">Depro Tech</span>
-          <span class="brand-badge">IA Solutions</span>
+        <div class="d-flex flex-column">
+          <span class="brand-name fw-bold lh-1 text-dark">Depro Tech</span>
+          <span class="brand-tagline text-primary fw-semibold">IA Solutions</span>
         </div>
       </a>
 
-      <nav class="nav-links">
-        <a href="#repertorio">Repertorio</a>
-        <a href="#simulador">Simuladores en Vivo</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#confidencialidad">Seguridad & NDA</a>
-      </nav>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20vi%20tu%20repertorio%20web%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20soluci%C3%B3n%20con%20IA%20para%20mi%20empresa" target="_blank" class="btn-nav-cta">
-        <span>Hablar por WhatsApp</span>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.12.82.83-3.04-.19-.3A8.2 8.2 0 0 1 3.8 11.91c0-4.54 3.69-8.24 8.25-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.55-.43-.14-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
-      </a>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="#catalogo">Catálogo de Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="#simulador">Simulador en Vivo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="#beneficios">Beneficios para tu Negocio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="#privacidad">Privacidad & Seguridad</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20estuve%20viendo%20el%20cat%C3%A1logo%20de%20proyectos%20y%20me%20gustar%C3%ADa%20cotizar%20uno%20para%20mi%20negocio" target="_blank" class="btn btn-whatsapp d-inline-flex align-items-center gap-2 px-3 py-2 fw-semibold rounded-pill shadow-sm">
+            <i class="bi bi-whatsapp fs-5"></i>
+            <span>Hablar por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section text-center">
+    <div class="container">
+      <div class="d-inline-flex align-items-center gap-2 bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-1 mb-3 fw-semibold small">
+        <span class="status-pulse-dot"></span>
+        <span>Catálogo Oficial de Soluciones • En Producción 24/7</span>
+      </div>
+
+      <h1 class="hero-title fw-bold text-dark mx-auto mb-3">
+        Automatizaciones & Agentes de IA para <span class="text-primary">Hacer Crecer tu Negocio</span>
+      </h1>
+
+      <p class="hero-subtitle text-secondary mx-auto mb-4 fs-5">
+        Atiende prospectos en WhatsApp en menos de 3 segundos, responde dudas sin inventar datos, sincroniza inventarios y cierra más ventas sin sobrecargar a tu equipo.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+        <a href="#catalogo" class="btn btn-primary btn-lg rounded-pill px-4 py-2 fw-semibold shadow-sm d-inline-flex align-items-center gap-2">
+          <span>Explorar Catálogo</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="#simulador" class="btn btn-outline-secondary btn-lg rounded-pill px-4 py-2 fw-semibold d-inline-flex align-items-center gap-2 bg-white">
+          <i class="bi bi-play-circle-fill text-primary"></i>
+          <span>Probar Simulador</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="metric-box bg-white p-3 rounded-4 border shadow-sm">
+            <div class="metric-number text-primary fw-bold">&lt; 3 seg</div>
+            <div class="metric-label fw-semibold text-dark small">Tiempo de Respuesta</div>
+            <div class="metric-sub text-muted extra-small">Cero prospectos en espera</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-box bg-white p-3 rounded-4 border shadow-sm">
+            <div class="metric-number text-success fw-bold">0%</div>
+            <div class="metric-label fw-semibold text-dark small">Respuestas Inventadas</div>
+            <div class="metric-sub text-muted extra-small">100% blindado a tu catálogo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-box bg-white p-3 rounded-4 border shadow-sm">
+            <div class="metric-number text-primary fw-bold">24/7</div>
+            <div class="metric-label fw-semibold text-dark small">Atención Continua</div>
+            <div class="metric-sub text-muted extra-small">Ventas activas fuera de horario</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-box bg-white p-3 rounded-4 border shadow-sm">
+            <div class="metric-number text-success fw-bold">$0</div>
+            <div class="metric-label fw-semibold text-dark small">Desperdicio en Spam</div>
+            <div class="metric-sub text-muted extra-small">Filtros de ahorro en charla casual</div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container hero-content">
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        <span>Repertorio Oficial • Ecosistemas de IA en Producción 24/7</span>
-      </div>
+  <!-- CATALOG & INTERACTIVE SIMULATOR SECTION (SINGLE SCREEN WORKFLOW) -->
+  <section id="catalogo" class="py-5 bg-light-subtle border-top border-bottom">
+    <div class="container py-3">
       
-      <h1 class="hero-title">
-        Ingeniería de Software & <span class="gradient-text">Agentes de IA</span> para Empresas
-      </h1>
-      
-      <p class="hero-subtitle">
-        Desarrollamos ecosistemas inteligentes que automatizan tus ventas: bots conversacionales con <strong>cero alucinaciones</strong>, sincronización de inventario en tiempo real, integración nativa con <strong>Kommo CRM</strong> y alertas inmediatas a WhatsApp.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#repertorio" class="btn-primary">
-          <span>Ver Repertorio de Proyectos</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#simulador" class="btn-secondary">
-          <span>Probar Simuladores en Vivo</span>
-        </a>
-      </div>
-
-      <!-- Quick Proof Metrics -->
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-number">24/7</div>
-          <div class="metric-label">Atención Ininterrumpida</div>
-          <div class="metric-sub">Cero demoras en responder prospectos</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-number">&lt; 3 seg</div>
-          <div class="metric-label">Tiempo de Respuesta</div>
-          <div class="metric-sub">Atención en el segundo exacto</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-number">0%</div>
-          <div class="metric-label">Alucinaciones / Inventos</div>
-          <div class="metric-sub">100% blindado a datos verificados</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-number">$0.00</div>
-          <div class="metric-label">Tokens en Charla Casual</div>
-          <div class="metric-sub">Filtros determinísticos anti-gasto</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REPERTORIO DE PROYECTOS SECTION -->
-  <section id="repertorio" class="section-repertorio">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Repertorio Tecnológico</div>
-        <h2 class="section-title">Nuestros <span class="gradient-text">Proyectos & Soluciones</span></h2>
-        <p class="section-desc">
-          Casos reales desarrollados para empresas. Por acuerdos de confidencialidad comercial (NDA), los accesos a datos privados se mantienen resguardados; aquí exhibimos la arquitectura técnica, las métricas y los simuladores interactivos de prueba.
+      <div class="text-center mb-4">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
+          Catálogo Interactivo
+        </span>
+        <h2 class="fw-bold text-dark mb-2">Elige un Proyecto y <span class="text-primary">Pruébalo al Instante</span></h2>
+        <p class="text-secondary mx-auto" style="max-width: 680px;">
+          Haz clic en cualquier categoría para ver lo que hace el sistema y probar la simulación en la misma pantalla.
         </p>
       </div>
 
-      <!-- Filter Tabs -->
-      <div class="repertorio-filter-container">
-        <div class="repertorio-filters" id="repertorio-filters">
-          <button class="filter-btn active" data-filter="all">Todos los Proyectos (4)</button>
-          <button class="filter-btn" data-filter="inmobiliaria">🏢 Inmobiliaria & Proptech</button>
-          <button class="filter-btn" data-filter="b2b">💼 B2B & Kommo CRM</button>
-          <button class="filter-btn" data-filter="retail">🛍️ Retail & E-commerce</button>
-          <button class="filter-btn" data-filter="soporte">🎧 Soporte & Helpdesk</button>
+      <!-- Confidentiality notice pill -->
+      <div class="alert alert-light border shadow-sm rounded-4 p-3 mb-4 d-flex align-items-center gap-3">
+        <div class="badge bg-light text-primary fs-4 border p-2 rounded-3">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <div class="small text-secondary">
+          <strong class="text-dark">Aviso de Privacidad Comercial:</strong>
+          Los datos privados, clientes y números de teléfono reales de nuestros clientes están protegidos bajo secreto profesional. Este catálogo utiliza demostraciones interactivas que replican con fidelidad la lógica de los sistemas en producción.
         </div>
       </div>
 
-      <!-- NDA & Privacy Notice Banner -->
-      <div class="nda-security-banner">
-        <div class="nda-icon">🔒</div>
-        <div class="nda-text">
-          <strong>Aviso de Confidencialidad y Propiedad Intelectual:</strong>
-          <span>Los números telefónicos de clientes, tokens de autenticación y bases de datos privadas están protegidos bajo estricto secreto profesional. Los simuladores de esta página operan con datos controlados reflejando exactamente la lógica de producción.</span>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="projects-grid" id="projects-grid">
+      <!-- Unified Catalog & Simulator Row -->
+      <div class="row g-4 align-items-start">
         
-        <!-- PROYECTO 1: Tu Techo Ideal -->
-        <article class="project-card" data-category="inmobiliaria">
-          <div class="project-card-header">
-            <div class="project-meta">
-              <span class="project-badge status-live">En Producción 24/7</span>
-              <span class="project-category">Inmobiliaria & Ventas de Lujo</span>
-            </div>
-            <div class="project-icon-box icon-realestate">🏢</div>
-          </div>
-
-          <h3 class="project-title">Tu Techo Ideal C.A.</h3>
-          <p class="project-subtitle">Ecosistema Inmobiliario Autónomo & Handoff a Asesores</p>
+        <!-- LEFT COLUMN: PROJECT SELECTOR & DETAILS -->
+        <div class="col-lg-6">
           
-          <p class="project-description">
-            Agente conversacional de alto nivel que atiende prospectos en WhatsApp e Instagram. Conectado en tiempo real con inventario en Google Sheets, bloquea alucinaciones con propiedades inexistentes (como locales o bares no catalogados), ahorra 100% de tokens en charlas informales y despacha alertas prioritarias al WhatsApp de los brokers Bárbara Bravo y Robert Jiménez.
-          </p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <span class="h-icon">⚡</span>
-              <span><strong>Respuestas &lt; 3 seg:</strong> Prospectos atendidos al instante.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">🛡️</span>
-              <span><strong>Cero Alucinaciones:</strong> Consulta estricta a Google Sheets.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">📲</span>
-              <span><strong>Alertas Multicanal:</strong> Notificación a WhatsApp de brokers en caliente.</span>
-            </div>
-          </div>
-
-          <div class="project-tech-tags">
-            <span class="tag-pill">Claude Sonnet 4.5</span>
-            <span class="tag-pill">Kommo CRM</span>
-            <span class="tag-pill">Google Sheets API</span>
-            <span class="tag-pill">WhatsApp API</span>
-            <span class="tag-pill">Node.js / Express</span>
-          </div>
-
-          <div class="project-card-actions">
-            <button class="btn-card-primary btn-load-bot" data-bot="techo-ideal">
-              <span>Probar Simulador</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <!-- Category Pills Tabs (Inside same window) -->
+          <div class="nav nav-pills project-pills-nav gap-2 mb-3 p-1 bg-white border rounded-4 shadow-sm" id="catalog-tabs" role="tablist">
+            <button class="nav-link active rounded-pill fw-semibold small flex-fill py-2" data-project="techo-ideal">
+              🏢 Inmobiliaria
             </button>
-            <button class="btn-card-outline btn-open-modal" data-project="techo-ideal">
-              <span>Ficha Técnica</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <button class="nav-link rounded-pill fw-semibold small flex-fill py-2" data-project="nexus-b2b">
+              💼 Ventas B2B
+            </button>
+            <button class="nav-link rounded-pill fw-semibold small flex-fill py-2" data-project="fastcommerce">
+              🛍️ Tiendas & Delivery
+            </button>
+            <button class="nav-link rounded-pill fw-semibold small flex-fill py-2" data-project="sentinel">
+              🎧 Soporte 24/7
             </button>
           </div>
-        </article>
 
-        <!-- PROYECTO 2: Nexus B2B Lead Scoring -->
-        <article class="project-card" data-category="b2b">
-          <div class="project-card-header">
-            <div class="project-meta">
-              <span class="project-badge status-success">Caso de Éxito B2B</span>
-              <span class="project-category">Calificación Comercial & CRM</span>
+          <!-- Active Project Info Card -->
+          <div class="card border rounded-4 shadow-sm bg-white p-4 mb-3" id="active-project-card">
+            
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1 fw-bold small mb-2 d-inline-block" id="project-status-badge">
+                  En Producción 24/7
+                </span>
+                <h3 class="fw-bold text-dark mb-1" id="project-title">Tu Techo Ideal C.A.</h3>
+                <div class="text-primary fw-semibold small" id="project-subtitle">Venta y Alquiler de Inmuebles en Caracas</div>
+              </div>
+              <div class="project-icon-avatar bg-primary-subtle text-primary rounded-4 d-flex align-items-center justify-content-center fs-3" id="project-main-icon">
+                🏢
+              </div>
             </div>
-            <div class="project-icon-box icon-b2b">💼</div>
-          </div>
 
-          <h3 class="project-title">Nexus B2B Solutions</h3>
-          <p class="project-subtitle">Calificador Automático de Leads & Sincronización Kommo</p>
-          
-          <p class="project-description">
-            Sistema automatizado de captura y cualificación de prospectos corporativos. El agente entrevista al cliente para identificar volumen del equipo, presupuesto y urgencia. Ejecuta un algoritmo de scoring en milisegundos, crea el negocio en la etapa exacta de Kommo CRM y asigna tareas inmediatas al ejecutivo de cuenta asignado.
-          </p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <span class="h-icon">🎯</span>
-              <span><strong>Lead Scoring 100%:</strong> Segmentación automática por presupuesto.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">⚡</span>
-              <span><strong>Kommo CRM API v4:</strong> Creación de tratos y tareas en 2 segundos.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">📈</span>
-              <span><strong>+65% Conversión:</strong> Eliminación de leads fríos desatendidos.</span>
-            </div>
-          </div>
-
-          <div class="project-tech-tags">
-            <span class="tag-pill">Kommo CRM API</span>
-            <span class="tag-pill">OpenAI GPT-4o</span>
-            <span class="tag-pill">Webhooks REST</span>
-            <span class="tag-pill">Lead Scoring Engine</span>
-            <span class="tag-pill">Render Cloud</span>
-          </div>
-
-          <div class="project-card-actions">
-            <button class="btn-card-primary btn-load-bot" data-bot="nexus-b2b">
-              <span>Probar Simulador</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <button class="btn-card-outline btn-open-modal" data-project="nexus-b2b">
-              <span>Ficha Técnica</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            </button>
-          </div>
-        </article>
-
-        <!-- PROYECTO 3: FastCommerce & Delivery -->
-        <article class="project-card" data-category="retail">
-          <div class="project-card-header">
-            <div class="project-meta">
-              <span class="project-badge status-active">Activo / Demostración</span>
-              <span class="project-category">Retail & Delivery por WhatsApp</span>
-            </div>
-            <div class="project-icon-box icon-retail">🛍️</div>
-          </div>
-
-          <h3 class="project-title">FastCommerce AI Express</h3>
-          <p class="project-subtitle">Catálogo Inteligente & Toma de Pedidos sin Fricción</p>
-          
-          <p class="project-description">
-            Asistente conversacional de comercio electrónico y delivery. El cliente consulta menús o catálogos, pide personalizaciones de productos, calcula costos de envío por zona de despacho y genera la orden de compra lista con instrucciones de pago en menos de dos minutos.
-          </p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <span class="h-icon">🍕</span>
-              <span><strong>Toma de Pedidos &lt; 2 min:</strong> Cero llamadas o esperas en caja.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">💵</span>
-              <span><strong>Cálculo Automático:</strong> Subtotales, recargos y delivery al instante.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">📦</span>
-              <span><strong>Upselling Sugerido:</strong> Aumento del ticket promedio con complementos.</span>
-            </div>
-          </div>
-
-          <div class="project-tech-tags">
-            <span class="tag-pill">WhatsApp Cloud API</span>
-            <span class="tag-pill">Claude AI Engine</span>
-            <span class="tag-pill">PostgreSQL / Sheets</span>
-            <span class="tag-pill">Checkout Webhooks</span>
-            <span class="tag-pill">Node.js</span>
-          </div>
-
-          <div class="project-card-actions">
-            <button class="btn-card-primary btn-load-bot" data-bot="fastcommerce">
-              <span>Probar Simulador</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <button class="btn-card-outline btn-open-modal" data-project="fastcommerce">
-              <span>Ficha Técnica</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            </button>
-          </div>
-        </article>
-
-        <!-- PROYECTO 4: Sentinel 24/7 Support -->
-        <article class="project-card" data-category="soporte">
-          <div class="project-card-header">
-            <div class="project-meta">
-              <span class="project-badge status-live">En Producción 24/7</span>
-              <span class="project-category">Soporte Corporativo & Helpdesk</span>
-            </div>
-            <div class="project-icon-box icon-support">🎧</div>
-          </div>
-
-          <h3 class="project-title">Sentinel 24/7 Support</h3>
-          <p class="project-subtitle">Mesa de Ayuda Nivel 1 con Base de Conocimiento Blindada</p>
-          
-          <p class="project-description">
-            Agente para empresas con alto volumen de consultas técnicas y soporte. Responde preguntas frecuentes, manuales operativos y dudas de facturación sin inventar información. Cuenta con detección de sentimiento negativo para escalar a supervisores humanos en caliente si detecta frustración.
-          </p>
-
-          <div class="project-highlights">
-            <div class="highlight-item">
-              <span class="h-icon">📖</span>
-              <span><strong>RAG Estricto:</strong> Respuestas extraídas solo de manuales certificados.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">🚨</span>
-              <span><strong>Handoff Urgente:</strong> Escalamiento con ticket prioritario a supervisor.</span>
-            </div>
-            <div class="highlight-item">
-              <span class="h-icon">📊</span>
-              <span><strong>85% Resolución:</strong> Reducción drástica de tickets en cola.</span>
-            </div>
-          </div>
-
-          <div class="project-tech-tags">
-            <span class="tag-pill">RAG Vectorial</span>
-            <span class="tag-pill">Claude 3.5 Sonnet</span>
-            <span class="tag-pill">Helpdesk Ticketing</span>
-            <span class="tag-pill">Sentimiento IA</span>
-            <span class="tag-pill">Node.js Microservices</span>
-          </div>
-
-          <div class="project-card-actions">
-            <button class="btn-card-primary btn-load-bot" data-bot="sentinel">
-              <span>Probar Simulador</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <button class="btn-card-outline btn-open-modal" data-project="sentinel">
-              <span>Ficha Técnica</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            </button>
-          </div>
-        </article>
-
-        <!-- PROYECTO 5: Custom Project Card (CTA) -->
-        <article class="project-card project-card-custom" data-category="all">
-          <div class="custom-card-content">
-            <div class="custom-icon">✨</div>
-            <span class="project-badge status-custom">Desarrollo a la Medida</span>
-            <h3 class="custom-title">¿Tienes un Nuevo Proyecto o Reto Empresarial?</h3>
-            <p class="custom-desc">
-              Diseñamos arquitecturas de software personalizadas: agentes para clínicas, concesionarios, firmas legales, aseguradoras o integración con tu ERP propietario.
+            <p class="text-secondary mb-3" id="project-description">
+              Atiende a clientes que buscan comprar o alquilar. Consulta la lista de propiedades en tiempo real, brinda precios y características verificadas, y alerta a los asesores de inmediato cuando un cliente desea visitar una propiedad.
             </p>
-            <ul class="custom-perks">
-              <li>✓ NDA y confidencialidad garantizada</li>
-              <li>✓ Entorno de pruebas y simulador antes de ir a producción</li>
-              <li>✓ Cero alucinaciones y control estricto de costos de IA</li>
-            </ul>
-            <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20tengo%20un%20proyecto%20espec%C3%ADfico%20que%20quiero%20desarrollar%20con%20IA%20y%20automatizaci%C3%B3n" target="_blank" class="btn-custom-cta">
-              <span>Cotizar Proyecto por WhatsApp</span>
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.12.82.83-3.04-.19-.3A8.2 8.2 0 0 1 3.8 11.91c0-4.54 3.69-8.24 8.25-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.55-.43-.14-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+
+            <!-- Key Business Benefits List -->
+            <div class="bg-light p-3 rounded-3 border mb-3">
+              <h6 class="fw-bold text-dark mb-2 small text-uppercase">Lo que resuelve para el negocio:</h6>
+              <ul class="list-unstyled mb-0 d-flex flex-column gap-2" id="project-benefits-list">
+                <li class="d-flex align-items-start gap-2 small text-secondary">
+                  <i class="bi bi-check-circle-fill text-success fs-6 mt-0"></i>
+                  <span><strong>Cero invento de datos:</strong> Si preguntan por un inmueble no disponible, no inventa datos; avisa a los asesores.</span>
+                </li>
+                <li class="d-flex align-items-start gap-2 small text-secondary">
+                  <i class="bi bi-check-circle-fill text-success fs-6 mt-0"></i>
+                  <span><strong>Actualización en segundos:</strong> Sincronizado a tu hoja de inventario sin configuraciones complejas.</span>
+                </li>
+                <li class="d-flex align-items-start gap-2 small text-secondary">
+                  <i class="bi bi-check-circle-fill text-success fs-6 mt-0"></i>
+                  <span><strong>Alerta inmediata a WhatsApp:</strong> Tus vendedores reciben la ficha del cliente en caliente.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Impact Metrics -->
+            <div class="row g-2 mb-3 text-center" id="project-impact-row">
+              <div class="col-4">
+                <div class="border rounded-3 p-2 bg-white">
+                  <div class="fw-bold text-primary" id="metric-1-val">&lt; 3 seg</div>
+                  <div class="extra-small text-muted" id="metric-1-lbl">Respuesta</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="border rounded-3 p-2 bg-white">
+                  <div class="fw-bold text-success" id="metric-2-val">100%</div>
+                  <div class="extra-small text-muted" id="metric-2-lbl">Datos Reales</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="border rounded-3 p-2 bg-white">
+                  <div class="fw-bold text-dark" id="metric-3-val">24/7</div>
+                  <div class="extra-small text-muted" id="metric-3-lbl">Atención</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-primary flex-fill rounded-pill py-2 fw-semibold d-inline-flex align-items-center justify-content-center gap-2" id="btn-focus-sim">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>Probar en el Teléfono</span>
+              </button>
+              <button class="btn btn-outline-secondary rounded-pill px-3 py-2 fw-semibold d-inline-flex align-items-center gap-2" id="btn-view-summary" data-bs-toggle="modal" data-bs-target="#projectModal">
+                <i class="bi bi-info-circle"></i>
+                <span>Ver Resumen</span>
+              </button>
+              <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20me%20interes%C3%B3%20el%20proyecto%20inmobiliario%20de%20tu%20cat%C3%A1logo" target="_blank" class="btn btn-outline-success rounded-pill px-3 py-2 fw-semibold d-inline-flex align-items-center gap-1" id="btn-project-wa">
+                <i class="bi bi-whatsapp"></i>
+                <span>Cotizar Igual</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Custom Solution Callout -->
+          <div class="card border border-dashed rounded-4 p-3 bg-white d-flex flex-row align-items-center justify-content-between gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="badge bg-warning-subtle text-warning-emphasis fs-4 p-2 rounded-3">
+                <i class="bi bi-stars"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold text-dark mb-0">¿Tu negocio tiene un flujo diferente?</h6>
+                <div class="extra-small text-secondary">Diseñamos agentes para clínicas, concesionarios, despachos y seguros.</div>
+              </div>
+            </div>
+            <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20tengo%20un%20proyecto%20especial%20y%20quiero%20cotizarlo" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill fw-semibold px-3 text-nowrap">
+              Escríbenos
             </a>
           </div>
-        </article>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERACTIVE MULTI-PROJECT AI SIMULATOR SECTION -->
-  <section id="simulador" class="section-simulator">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Demostración en Vivo</div>
-        <h2 class="section-title">Prueba los <span class="gradient-text">Simuladores de Agentes IA</span></h2>
-        <p class="section-desc">
-          Selecciona cualquiera de nuestros proyectos a continuación para cargar su bot correspondiente en el teléfono interactivo. Prueba preguntas reales, filtros determinísticos anti-gasto y protocolos de alerta.
-        </p>
-      </div>
-
-      <!-- Simulator Bot Selector Tabs -->
-      <div class="bot-selector-wrapper">
-        <span class="bot-selector-label">Selecciona el bot a simular:</span>
-        <div class="bot-selector-pills">
-          <button class="bot-pill-btn active" data-bot="techo-ideal">
-            <span class="pill-icon">🏢</span>
-            <div class="pill-text">
-              <span class="pill-name">Tu Techo Ideal</span>
-              <span class="pill-sub">Inmobiliaria & Ventas</span>
-            </div>
-          </button>
-
-          <button class="bot-pill-btn" data-bot="nexus-b2b">
-            <span class="pill-icon">💼</span>
-            <div class="pill-text">
-              <span class="pill-name">Nexus B2B</span>
-              <span class="pill-sub">Calificador Kommo CRM</span>
-            </div>
-          </button>
-
-          <button class="bot-pill-btn" data-bot="fastcommerce">
-            <span class="pill-icon">🛍️</span>
-            <div class="pill-text">
-              <span class="pill-name">FastCommerce</span>
-              <span class="pill-sub">Pedidos & Catálogo</span>
-            </div>
-          </button>
-
-          <button class="bot-pill-btn" data-bot="sentinel">
-            <span class="pill-icon">🎧</span>
-            <div class="pill-text">
-              <span class="pill-name">Sentinel 24/7</span>
-              <span class="pill-sub">Soporte Corporativo</span>
-            </div>
-          </button>
         </div>
-      </div>
 
-      <div class="simulator-wrapper">
-        <!-- Phone Mockup Container -->
-        <div class="phone-mockup">
-          <div class="phone-speaker"></div>
+        <!-- RIGHT COLUMN: INTERACTIVE LIVE PHONE SIMULATOR -->
+        <div class="col-lg-6" id="simulador">
           
-          <!-- Chat Header -->
-          <div class="chat-header">
-            <div class="chat-avatar" id="sim-avatar">
-              <div class="bot-badge-icon" id="sim-avatar-icon">🏢</div>
-              <span class="online-indicator"></span>
+          <div class="phone-frame-light mx-auto shadow-lg">
+            
+            <!-- Phone Notch & Speaker -->
+            <div class="phone-top-bar text-center pt-2 pb-1">
+              <span class="phone-speaker-pill"></span>
             </div>
-            <div class="chat-info">
-              <div class="chat-title" id="sim-bot-title">Agente Inmobiliario IA</div>
-              <div class="chat-status" id="sim-bot-status">Tu Techo Ideal • Depro Tech Engine</div>
-            </div>
-            <div class="chat-actions">
-              <button id="btn-reset-chat" title="Reiniciar Chat" class="btn-icon">↺</button>
-            </div>
-          </div>
 
-          <!-- Alert Simulation Banner (Hidden by default, triggered on special flows) -->
-          <div id="sim-alert-banner" class="sim-alert-banner">
-            <div class="sim-alert-icon" id="sim-alert-icon">🚨</div>
-            <div class="sim-alert-text">
-              <strong id="sim-alert-title">¡Alerta Multicanal Disparada!</strong>
-              <span id="sim-alert-desc">WhatsApp enviado a Robert (+58 414 311 5105) + Tarea urgente creada en Kommo.</span>
-            </div>
-          </div>
-
-          <!-- Chat Messages Body -->
-          <div class="chat-body" id="chat-body">
-            <!-- Messages injected dynamically by app.js -->
-          </div>
-
-          <!-- Preset Chips to click -->
-          <div class="chat-presets">
-            <span class="presets-label">Prueba con un clic:</span>
-            <div class="chips-container" id="chips-container">
-              <!-- Preset chips dynamically injected by app.js -->
-            </div>
-          </div>
-
-          <!-- Chat Input Area -->
-          <form id="chat-form" class="chat-input-area">
-            <input type="text" id="chat-input" placeholder="Escribe un mensaje de prueba..." autocomplete="off">
-            <button type="submit" id="btn-send" class="btn-send">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </button>
-          </form>
-        </div>
-
-        <!-- Simulator Explanation Card -->
-        <div class="simulator-details">
-          <div class="feature-box">
-            <div class="feature-icon">🛡️</div>
-            <div>
-              <h3>Blindaje Anti-Alucinaciones</h3>
-              <p>Si un prospecto consulta información no registrada en tus bases de datos, el agente <strong>jamás inventa datos ni pide disculpas absurdas</strong>. Activa un mensaje de espera elegante y alerta a tu equipo para atención humana.</p>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon">⚡</div>
-            <div>
-              <h3>Filtros Determinísticos Anti-Gasto</h3>
-              <p>Comentarios informales ("si es una locura", "jajaja", emojis) son analizados en milisegundos con <strong>$0 de costo de tokens de IA</strong>. Cero despilfarro de presupuesto en charla ociosa.</p>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon">📊</div>
-            <div>
-              <h3>Bases de Datos en Tiempo Real</h3>
-              <p>Conectividad bidireccional con Google Sheets, PostgreSQL o tu CRM. Modifica un precio o una fila y en ese mismo segundo el bot conoce la información actualizada.</p>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon">📲</div>
-            <div>
-              <h3>Alertas en Caliente a WhatsApp</h3>
-              <p>Cuando un cliente califica o muestra intención de compra real, el sistema despacha una notificación prioritaria al WhatsApp de tus vendedores con número directo y ficha del lead.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONFIDENCIALIDAD & PROTOCOLOS DE SEGURIDAD SECTION -->
-  <section id="confidencialidad" class="section-security">
-    <div class="container">
-      <div class="security-card">
-        <div class="security-grid">
-          <div class="security-info">
-            <div class="section-tag">Estándares Corporativos</div>
-            <h2 class="security-title">Privacidad, Seguridad & Acuerdos NDA</h2>
-            <p class="security-text">
-              Sabemos que los datos comerciales, bases de clientes y procesos operativos son el activo más valioso de cualquier negocio. En <strong>Depro Tech</strong> aplicamos una política de tolerancia cero ante brechas de privacidad:
-            </p>
-
-            <div class="security-checklist">
-              <div class="sec-item">
-                <span class="sec-icon">🔒</span>
-                <div>
-                  <strong>Acuerdo de Confidencialidad (NDA) Previo:</strong>
-                  <span>Firmamos un acuerdo formal antes de acceder a tus canales, catálogos o credenciales.</span>
+            <!-- WhatsApp Header Style -->
+            <div class="phone-header bg-white border-bottom px-3 py-2 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-2">
+                <div class="phone-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" id="sim-avatar">
+                  🏢
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="fw-bold text-dark small lh-1" id="sim-bot-title">Agente Inmobiliario</span>
+                  <span class="text-success extra-small fw-semibold d-flex align-items-center gap-1">
+                    <span class="online-indicator-dot"></span>
+                    <span id="sim-bot-status">En línea • Tu Techo Ideal</span>
+                  </span>
                 </div>
               </div>
 
-              <div class="sec-item">
-                <span class="sec-icon">🛡️</span>
-                <div>
-                  <strong>Aislamiento de Entornos:</strong>
-                  <span>Tus bases de datos de producción jamás se mezclan con demostraciones públicas. Los simuladores usan réplicas anonimizadas.</span>
-                </div>
-              </div>
-
-              <div class="sec-item">
-                <span class="sec-icon">🔑</span>
-                <div>
-                  <strong>Encriptación de Tokens & Webhooks:</strong>
-                  <span>Tus claves API de Kommo, WhatsApp y Claude se almacenan en variables de entorno seguras con cifrado AES-256.</span>
-                </div>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-light rounded-circle text-secondary p-1" id="btn-reset-chat" title="Reiniciar chat">
+                  <i class="bi bi-arrow-counterclockwise fs-6"></i>
+                </button>
               </div>
             </div>
+
+            <!-- Notification Banner for High Priority Events -->
+            <div id="sim-alert-banner" class="sim-alert-banner-light px-3 py-2 border-bottom bg-danger-subtle text-danger small d-none">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-bell-fill fs-6" id="sim-alert-icon"></i>
+                <div>
+                  <strong class="d-block lh-1" id="sim-alert-title">¡Alerta Prioritaria!</strong>
+                  <span class="extra-small text-danger-emphasis" id="sim-alert-desc">Notificación enviada a WhatsApp del asesor.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Messages Body -->
+            <div class="phone-chat-body p-3" id="chat-body">
+              <!-- Messages dynamically injected -->
+            </div>
+
+            <!-- Quick Click Chips -->
+            <div class="phone-chips-bar bg-white border-top p-2">
+              <div class="d-flex align-items-center justify-content-between mb-1 px-1">
+                <span class="extra-small text-muted fw-semibold text-uppercase">Toca una consulta de prueba:</span>
+                <span class="extra-small text-primary fw-medium"><i class="bi bi-hand-index-thumb"></i> 1 clic</span>
+              </div>
+              <div class="chips-scroll-container d-flex gap-2 overflow-auto pb-1" id="chips-container">
+                <!-- Preset chips dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Message Input Area -->
+            <form id="chat-form" class="phone-input-bar bg-white border-top p-2 d-flex align-items-center gap-2">
+              <input type="text" id="chat-input" class="form-control form-control-sm rounded-pill border-light-subtle bg-light px-3" placeholder="Escribe un mensaje de prueba..." autocomplete="off">
+              <button type="submit" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center p-2" id="btn-send-msg" style="width: 34px; height: 34px;">
+                <i class="bi bi-send-fill" style="transform: rotate(45deg); font-size: 0.75rem;"></i>
+              </button>
+            </form>
+
           </div>
 
-          <div class="security-badge-box">
-            <div class="shield-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-            </div>
-            <h4>Garantía de Confidencialidad</h4>
-            <p>Tus clientes son tuyos. Tus datos son privados. Tu ventaja competitiva queda 100% blindada.</p>
-            <div class="tech-cert-pills">
-              <span>Zero-Data Retention</span>
-              <span>HTTPS / TLS 1.3</span>
-              <span>OAuth 2.0 Kommo</span>
-            </div>
+          <div class="text-center mt-3">
+            <span class="badge bg-white text-secondary border px-3 py-1 rounded-pill small shadow-sm">
+              <i class="bi bi-lightning-charge-fill text-warning"></i> Motor con detección automática de intención y filtros de ahorro
+            </span>
           </div>
+
         </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="servicios" class="section-services">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Nuestras Capacidades</div>
-        <h2 class="section-title">Soluciones que Diseñamos en <span class="gradient-text">Depro Tech</span></h2>
-        <p class="section-desc">
-          Tecnología a la medida para empresas que desean escalar su atención, cerrar más ventas y eliminar procesos repetitivos.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🤖</div>
-          <h3>Agentes de IA Especializados</h3>
-          <p>Modelos de lenguaje entrenados estrictamente con tus reglas comerciales, catálogos y políticas. Cero alucinaciones, respuestas empáticas y calificación de leads en frío.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔄</div>
-          <h3>Automatización Integral de CRM</h3>
-          <p>Configuración experta de Kommo, HubSpot y Make. Creación de embudos digitales automáticos, asignación de tareas a asesores y seguimiento sin intervención humana.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3>Microservicios & APIs en la Nube</h3>
-          <p>Servidores dedicados con Express, Node.js y Python desplegados en Render o AWS. Webhooks ultra-rápidos, sistemas de cola anti-duplicación y alta disponibilidad 99.9%.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">📊</div>
-          <h3>Bases de Datos & Dashboards</h3>
-          <p>Conexión en tiempo real con Google Sheets, Airtable, PostgreSQL y paneles analíticos en vivo para medir consumo de tokens, clientes atendidos y conversiones.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🚨</div>
-          <h3>Alertas Multicanal en Caliente</h3>
-          <p>Notificaciones push directas al WhatsApp y correo electrónico de tus vendedores en el instante exacto en que un prospecto muestra intención de compra.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔒</div>
-          <h3>Protección de Costos y Tokens</h3>
-          <p>Filtros de intención inteligentes para que tu presupuesto de IA solo se use en clientes reales y jamás en charla casual, spam o mensajes irrelevantes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECH STACK SECTION -->
-  <section class="section-tech">
-    <div class="container text-center">
-      <div class="section-tag">Tecnologías Dominadas</div>
-      <h3 class="tech-title">Stack Tecnológico de Nivel Empresarial</h3>
+  <!-- BENEFITS FOR BUSINESS OWNERS (NO CODE JARGON) -->
+  <section id="beneficios" class="py-5 bg-white">
+    <div class="container py-3">
       
-      <div class="tech-grid">
-        <div class="tech-pill">Claude Sonnet 4.5 (Anthropic)</div>
-        <div class="tech-pill">OpenAI GPT-4o</div>
-        <div class="tech-pill">Kommo CRM (API v4)</div>
-        <div class="tech-pill">WhatsApp Cloud API</div>
-        <div class="tech-pill">Node.js & Express</div>
-        <div class="tech-pill">Render Cloud Infrastructure</div>
-        <div class="tech-pill">Google Sheets Cloud API</div>
-        <div class="tech-pill">Make.com Automations</div>
-        <div class="tech-pill">Webhooks & RESTful APIs</div>
+      <div class="text-center mb-5">
+        <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
+          Ventajas Reales
+        </span>
+        <h2 class="fw-bold text-dark mb-2">Por qué los Negocios Eligen <span class="text-primary">Depro Tech</span></h2>
+        <p class="text-secondary mx-auto" style="max-width: 650px;">
+          Desarrollamos soluciones prácticas pensadas en aumentar tus ventas y proteger tu tiempo, sin complicaciones técnicas.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 p-4 shadow-sm bg-white hover-lift">
+            <div class="feature-icon-box bg-primary-subtle text-primary rounded-3 mb-3 d-flex align-items-center justify-content-center fs-3">
+              <i class="bi bi-stopwatch-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Atención en 3 Segundos</h5>
+            <p class="text-secondary small mb-0">
+              El 70% de los clientes compra al primer negocio que responde. Tus prospectos reciben atención inmediata día y noche.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 p-4 shadow-sm bg-white hover-lift">
+            <div class="feature-icon-box bg-success-subtle text-success rounded-3 mb-3 d-flex align-items-center justify-content-center fs-3">
+              <i class="bi bi-check2-circle"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Cero Respuestas Falsas</h5>
+            <p class="text-secondary small mb-0">
+              Nuestros agentes nunca inventan precios o servicios. Si algo no está en tu base de datos, avisan cortésmente a tu equipo.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 p-4 shadow-sm bg-white hover-lift">
+            <div class="feature-icon-box bg-info-subtle text-info-emphasis rounded-3 mb-3 d-flex align-items-center justify-content-center fs-3">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Conectado a tu WhatsApp</h5>
+            <p class="text-secondary small mb-0">
+              Tus clientes no tienen que descargar apps ni entrar a páginas raras. Todo funciona en el canal donde ya te escriben.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 p-4 shadow-sm bg-white hover-lift">
+            <div class="feature-icon-box bg-warning-subtle text-warning-emphasis rounded-3 mb-3 d-flex align-items-center justify-content-center fs-3">
+              <i class="bi bi-piggy-bank-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Cero Gasto en Spam</h5>
+            <p class="text-secondary small mb-0">
+              Filtramos automáticamente bromas, saludos casuales y mensajes irrelevantes sin gastar saldo innecesario de IA.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRIVACY & SECURITY SECTION -->
+  <section id="privacidad" class="py-5 bg-light-subtle border-top border-bottom">
+    <div class="container py-3">
+      <div class="card border rounded-4 p-4 p-md-5 bg-white shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="d-inline-flex align-items-center gap-2 bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1 mb-2 fw-semibold small">
+              <i class="bi bi-shield-check"></i>
+              <span>Protección Absoluta</span>
+            </div>
+            <h3 class="fw-bold text-dark mb-3">Tus Datos y Clientes Están 100% Blindados</h3>
+            <p class="text-secondary mb-4">
+              Trabajamos con acuerdos de confidencialidad estrictos (NDA). Tus listas de contactos, historiales de ventas y estrategias comerciales son propiedad exclusiva de tu empresa y jamás se comparten.
+            </p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 text-dark small fw-medium">
+                  <i class="bi bi-check-lg text-primary fw-bold"></i>
+                  <span>Firmas de confidencialidad (NDA)</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 text-dark small fw-medium">
+                  <i class="bi bi-check-lg text-primary fw-bold"></i>
+                  <span>Bases de datos privadas e independientes</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 text-dark small fw-medium">
+                  <i class="bi bi-check-lg text-primary fw-bold"></i>
+                  <span>Pruebas en simulador antes de ir a vivo</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 text-dark small fw-medium">
+                  <i class="bi bi-check-lg text-primary fw-bold"></i>
+                  <span>Soporte y acompañamiento continuo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="p-4 bg-light rounded-4 border">
+              <i class="bi bi-file-earmark-lock-fill text-primary display-4 mb-2 d-inline-block"></i>
+              <h5 class="fw-bold text-dark mb-1">Garantía de Privacidad</h5>
+              <p class="text-muted small mb-0">Demostraciones seguras con réplicas controladas sin exponer tu negocio.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA SECTION -->
-  <section class="section-cta">
-    <div class="container">
-      <div class="cta-box">
-        <h2 class="cta-title">¿Listo para Automatizar tu Negocio con IA?</h2>
-        <p class="cta-desc">
-          Hablemos hoy mismo. Evaluamos tus canales de venta y diseñamos un agente de inteligencia artificial a la medida de tu empresa.
-        </p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20estuve%20revisando%20tu%20repertorio%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20demostraci%C3%B3n%20para%20mi%20negocio" target="_blank" class="btn-primary btn-cta-lg">
-            <span>Conversar con Nosotros por WhatsApp</span>
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.12.82.83-3.04-.19-.3A8.2 8.2 0 0 1 3.8 11.91c0-4.54 3.69-8.24 8.25-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.55-.43-.14-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+  <!-- FINAL CALL TO ACTION -->
+  <section class="py-5 bg-white text-center">
+    <div class="container py-4">
+      <div class="bg-primary text-white rounded-5 p-4 p-md-5 shadow position-relative overflow-hidden">
+        <div class="position-relative z-1" style="max-width: 680px; margin: 0 auto;">
+          <h2 class="fw-bold mb-3">¿Listo para Automatizar tu Negocio?</h2>
+          <p class="text-white-50 fs-5 mb-4">
+            Escríbenos por WhatsApp hoy mismo. Evaluamos tus canales y te preparamos una demostración a la medida de tu empresa sin compromiso.
+          </p>
+          <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20quiero%20cotizar%20un%20agente%20de%20IA%20para%20mi%20negocio" target="_blank" class="btn btn-light btn-lg text-primary fw-bold rounded-pill px-4 py-3 shadow-sm d-inline-flex align-items-center gap-2">
+            <i class="bi bi-whatsapp fs-5 text-success"></i>
+            <span>Hablar con Nosotros por WhatsApp</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MODAL: FICHA TÉCNICA & ARQUITECTURA -->
-  <div id="project-modal" class="modal-overlay" aria-hidden="true">
-    <div class="modal-card">
-      <button class="modal-close" id="btn-close-modal" aria-label="Cerrar ventana">&times;</button>
-      
-      <div class="modal-header">
-        <div class="modal-icon-badge" id="modal-icon">🏢</div>
-        <div>
-          <span class="modal-category" id="modal-category">Inmobiliaria & Proptech</span>
-          <h3 class="modal-title" id="modal-title">Tu Techo Ideal C.A.</h3>
-        </div>
+  <!-- FOOTER -->
+  <footer class="py-4 bg-white border-top text-secondary small">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <span class="fw-bold text-dark">Depro Tech</span>
+        <span class="text-muted">• Soluciones de Software & Agentes de IA</span>
       </div>
+      <div>
+        <span>© 2026 Depro Tech IA Solutions. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
 
-      <div class="modal-body">
-        <div class="modal-section">
-          <h4>🎯 Desafío del Cliente</h4>
-          <p id="modal-challenge"></p>
+  <!-- BOOTSTRAP MODAL (RESUMEN EJECUTIVO SIMPLE) -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        
+        <div class="modal-header border-bottom px-4 pt-4 pb-3">
+          <div class="d-flex align-items-center gap-2">
+            <div class="badge bg-primary-subtle text-primary fs-5 p-2 rounded-3" id="modal-project-icon">🏢</div>
+            <div>
+              <span class="extra-small text-uppercase fw-bold text-primary" id="modal-project-category">Inmobiliaria</span>
+              <h5 class="modal-title fw-bold text-dark mb-0" id="modal-project-title">Tu Techo Ideal C.A.</h5>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
 
-        <div class="modal-section">
-          <h4>💡 Solución Arquitectónica Implementada</h4>
-          <p id="modal-solution"></p>
-        </div>
+        <div class="modal-body p-4">
+          <div class="mb-3">
+            <h6 class="fw-bold text-dark small text-uppercase mb-1">El reto del negocio:</h6>
+            <p class="text-secondary small mb-0" id="modal-project-challenge">
+              Responder de inmediato decenas de prospectos diarios fuera de horario sin inventar propiedades ni perder clientes.
+            </p>
+          </div>
 
-        <div class="modal-section">
-          <h4>📐 Flujo Técnico de Datos</h4>
-          <div class="modal-flow-steps" id="modal-flow">
-            <!-- Dynamic flow steps -->
+          <div class="mb-3">
+            <h6 class="fw-bold text-dark small text-uppercase mb-1">La solución entregada:</h6>
+            <p class="text-secondary small mb-0" id="modal-project-solution">
+              Agente inteligente en WhatsApp que lee la lista de propiedades, entrega detalles verificados y alerta de inmediato al vendedor cuando hay interés real.
+            </p>
+          </div>
+
+          <div class="bg-light p-3 rounded-3 border mb-3">
+            <h6 class="fw-bold text-dark small text-uppercase mb-2">Resultados comprobados:</h6>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small text-secondary" id="modal-project-results">
+              <li>✓ Respuestas en menos de 3 segundos</li>
+              <li>✓ 0% datos inventados o erróneos</li>
+              <li>✓ Cero mensajes de clientes perdidos</li>
+            </ul>
+          </div>
+
+          <div class="extra-small text-muted border-top pt-2">
+            <i class="bi bi-lock-fill text-secondary"></i> Sistema confidencial protegido. Se entrega adaptado a las necesidades de tu empresa.
           </div>
         </div>
 
-        <div class="modal-section">
-          <h4>🛠️ Tecnologías e Integraciones</h4>
-          <div class="modal-tech-pills" id="modal-tech">
-            <!-- Dynamic pills -->
-          </div>
+        <div class="modal-footer border-top px-4 py-3 bg-light rounded-bottom-4 d-flex justify-content-between">
+          <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-medium" data-bs-dismiss="modal">Cerrar</button>
+          <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20proyecto" target="_blank" class="btn btn-sm btn-whatsapp rounded-pill px-3 fw-semibold d-inline-flex align-items-center gap-1">
+            <i class="bi bi-whatsapp"></i>
+            <span>Pedir Propuesta</span>
+          </a>
         </div>
 
-        <div class="modal-privacy-callout">
-          <strong>🔒 Nota de Protección de Código:</strong>
-          <span>Por motivos de confidencialidad comercial y seguridad, las claves de acceso y el código fuente propietario se mantienen en repositorios privados. Podemos replicar y adaptar esta misma arquitectura para las necesidades de tu empresa.</span>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn-modal-test" id="btn-modal-test-action">
-          <span>Probar en el Simulador</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20vi%20la%20ficha%20t%C3%A9cnica%20en%20tu%20repertorio%20y%20quiero%20cotizar%20un%20sistema%20similar" target="_blank" class="btn-modal-whatsapp">
-          <span>Consultar por WhatsApp</span>
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.12.82.83-3.04-.19-.3A8.2 8.2 0 0 1 3.8 11.91c0-4.54 3.69-8.24 8.25-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.55-.43-.14-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
-        </a>
       </div>
     </div>
   </div>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20estuve%20viendo%20tu%20repertorio%20de%20proyectos%20y%20deseo%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="floating-whatsapp" title="Hablar con Depro Tech">
-    <div class="whatsapp-badge-pulse"></div>
-    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.12.82.83-3.04-.19-.3A8.2 8.2 0 0 1 3.8 11.91c0-4.54 3.69-8.24 8.25-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.55-.43-.14-.01-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+  <a href="https://wa.me/584143115105?text=Hola%20Depro%20Tech%2C%20estuve%20revisando%20su%20cat%C3%A1logo%20web" target="_blank" class="floating-wa-btn shadow-lg" title="Escríbenos por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
   </a>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <div class="brand-text">
-          <span class="brand-name">Depro Tech</span>
-          <span class="brand-badge">IA Solutions</span>
-        </div>
-        <p class="footer-desc">Soluciones de Software, Agentes de Inteligencia Artificial & Automatización para Negocios.</p>
-      </div>
-      <div class="footer-copy">
-        <p>© 2026 Depro Tech IA Solutions. Todos los derechos reservados. Desarrollado con los más altos estándares de privacidad y seguridad.</p>
-      </div>
-    </div>
-  </footer>
-
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

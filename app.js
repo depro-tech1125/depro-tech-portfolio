@@ -1,477 +1,490 @@
 // ==========================================================================
-// DEPRO TECH IA SOLUTIONS - MULTI-PROJECT SIMULATOR & REPERTOIRE ENGINE
+// DEPRO TECH IA SOLUTIONS - LIGHT CORPORATE CATALOG & SIMULATOR ENGINE
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Elements
+  // DOM Elements - Left Card
+  const projectTitle = document.getElementById('project-title');
+  const projectSubtitle = document.getElementById('project-subtitle');
+  const projectMainIcon = document.getElementById('project-main-icon');
+  const projectDescription = document.getElementById('project-description');
+  const projectBenefitsList = document.getElementById('project-benefits-list');
+  const metric1Val = document.getElementById('metric-1-val');
+  const metric1Lbl = document.getElementById('metric-1-lbl');
+  const metric2Val = document.getElementById('metric-2-val');
+  const metric2Lbl = document.getElementById('metric-2-lbl');
+  const metric3Val = document.getElementById('metric-3-val');
+  const metric3Lbl = document.getElementById('metric-3-lbl');
+  const btnProjectWa = document.getElementById('btn-project-wa');
+  const btnFocusSim = document.getElementById('btn-focus-sim');
+  const catalogTabs = document.querySelectorAll('#catalog-tabs button');
+
+  // DOM Elements - Simulator
   const chatBody = document.getElementById('chat-body');
   const chatForm = document.getElementById('chat-form');
   const chatInput = document.getElementById('chat-input');
-  const btnReset = document.getElementById('btn-reset-chat');
-  const alertBanner = document.getElementById('sim-alert-banner');
-  const alertTitle = document.getElementById('sim-alert-title');
-  const alertDesc = document.getElementById('sim-alert-desc');
-  const alertIcon = document.getElementById('sim-alert-icon');
-  const chipsContainer = document.getElementById('chips-container');
+  const btnResetChat = document.getElementById('btn-reset-chat');
   const simAvatar = document.getElementById('sim-avatar');
-  const simAvatarIcon = document.getElementById('sim-avatar-icon');
   const simBotTitle = document.getElementById('sim-bot-title');
   const simBotStatus = document.getElementById('sim-bot-status');
-  const botSelectorBtns = document.querySelectorAll('.bot-pill-btn');
-  const phoneMockup = document.querySelector('.phone-mockup');
+  const chipsContainer = document.getElementById('chips-container');
+  const simAlertBanner = document.getElementById('sim-alert-banner');
+  const simAlertTitle = document.getElementById('sim-alert-title');
+  const simAlertDesc = document.getElementById('sim-alert-desc');
+  const simAlertIcon = document.getElementById('sim-alert-icon');
 
-  // Filter Elements
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  // DOM Elements - Modal
+  const modalProjectIcon = document.getElementById('modal-project-icon');
+  const modalProjectCategory = document.getElementById('modal-project-category');
+  const modalProjectTitle = document.getElementById('modal-project-title');
+  const modalProjectChallenge = document.getElementById('modal-project-challenge');
+  const modalProjectSolution = document.getElementById('modal-project-solution');
+  const modalProjectResults = document.getElementById('modal-project-results');
 
-  // Modal Elements
-  const modalOverlay = document.getElementById('project-modal');
-  const btnCloseModal = document.getElementById('btn-close-modal');
-  const modalIcon = document.getElementById('modal-icon');
-  const modalCategory = document.getElementById('modal-category');
-  const modalTitle = document.getElementById('modal-title');
-  const modalChallenge = document.getElementById('modal-challenge');
-  const modalSolution = document.getElementById('modal-solution');
-  const modalFlow = document.getElementById('modal-flow');
-  const modalTech = document.getElementById('modal-tech');
-  const btnModalTestAction = document.getElementById('btn-modal-test-action');
-
-  let currentBotKey = 'techo-ideal';
-  let activeModalProjectKey = 'techo-ideal';
+  let activeProjectKey = 'techo-ideal';
 
   // ==========================================================================
-  // BOT PROFILES & SIMULATION RESPONSES
+  // PROJECTS & SIMULATOR DATA (CLEAR BUSINESS LANGUAGE - NO TECH JARGON)
   // ==========================================================================
-  const BOTS = {
+  const PROJECTS_DATA = {
     'techo-ideal': {
-      title: 'Agente Inmobiliario IA',
-      status: 'Tu Techo Ideal • Depro Tech Engine',
+      category: 'Inmobiliaria & Proptech',
+      title: 'Tu Techo Ideal C.A.',
+      subtitle: 'Venta y Alquiler de Inmuebles en Caracas',
       icon: '🏢',
-      avatarGradient: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
-      initialMsg: `
-        <p>Hola, bienvenido a Tu techo ideal 👋</p>
-        <p>Soy el asistente virtual de Bárbara Bravo y Robert Jiménez. ¿En qué podemos ayudarte hoy? ¿Buscas comprar, alquilar o información de algún inmueble?</p>
-      `,
-      chips: [
-        { label: '🏠 Apartamento en La Boyera', msg: 'Busco apartamento en venta en La Boyera' },
-        { label: '🍸 Anuncio del bar en El Hatillo', msg: 'Estoy interesado en el anuncio del bar en El Hatillo' },
-        { label: '🏢 Casa Comercial Alta Florida', msg: 'Casa comercial para alquiler en Alta Florida' },
-        { label: '💬 Charla casual / broma', msg: 'si es una locura jaja' }
+      description: 'Atiende a clientes que buscan comprar o alquilar. Consulta la lista de propiedades en tiempo real, brinda precios y características verificadas, y alerta a los asesores de inmediato cuando un cliente desea visitar una propiedad.',
+      benefits: [
+        { strong: 'Cero invento de datos:', text: 'Si preguntan por un inmueble no disponible, no inventa datos; avisa a los asesores.' },
+        { strong: 'Actualización en segundos:', text: 'Sincronizado a tu inventario sin configuraciones complejas.' },
+        { strong: 'Alerta inmediata a WhatsApp:', text: 'Tus vendedores reciben la ficha del cliente en caliente con número directo.' }
       ],
-      alert: {
-        icon: '🚨',
-        title: '¡Alerta Multicanal Disparada!',
-        desc: 'WhatsApp enviado a Robert (+58 414 311 5105) + Tarea urgente creada en Kommo.'
+      metrics: [
+        { val: '< 3 seg', lbl: 'Respuesta' },
+        { val: '100%', lbl: 'Datos Reales' },
+        { val: '24/7', lbl: 'Atención' }
+      ],
+      waMessage: 'Hola Depro Tech, vi el sistema de Tu Techo Ideal y me gustaría implementar un bot inmobiliario para mi negocio.',
+      modal: {
+        challenge: 'Responder de inmediato decenas de prospectos diarios fuera de horario sin inventar propiedades ni perder clientes potenciales.',
+        solution: 'Agente en WhatsApp conectado a la lista de propiedades reales. Informa precios, fotos y agenda visitas con Bárbara y Robert automáticamente.',
+        results: [
+          'Respuestas en menos de 3 segundos día y noche',
+          '0% datos o propiedades inventadas',
+          'Avisos prioritarios directos al WhatsApp del asesor'
+        ]
       },
-      process: (raw) => {
-        const q = raw.toLowerCase().trim();
+      bot: {
+        title: 'Agente Inmobiliario',
+        status: 'En línea • Tu Techo Ideal',
+        avatar: '🏢',
+        greeting: `
+          <p>Hola, bienvenido a Tu techo ideal 👋</p>
+          <p>Soy el asistente virtual de Bárbara Bravo y Robert Jiménez. ¿En qué podemos ayudarte hoy? ¿Buscas comprar, alquilar o información de algún inmueble?</p>
+        `,
+        chips: [
+          { label: '🏠 Apto en La Boyera', msg: 'Busco apartamento en venta en La Boyera' },
+          { label: '🏢 Casa Alta Florida', msg: 'Casa comercial para alquiler en Alta Florida' },
+          { label: '🍸 Anuncio del bar en El Hatillo', msg: 'Estoy interesado en el bar de El Hatillo' },
+          { label: '💬 jaja muy caro', msg: 'si es una locura jaja' }
+        ],
+        respond: (raw) => {
+          const q = raw.toLowerCase().trim();
 
-        // 1. Bar / inmueble no registrado (Zero Hallucination Guard)
-        if (q.includes('bar') || q.includes('discoteca') || q.includes('tasca') || q.includes('panaderia') || q.includes('restaurante')) {
+          // Bar / no disponible (Blindaje sin inventar)
+          if (q.includes('bar') || q.includes('discoteca') || q.includes('restaurante')) {
+            return {
+              html: `
+                <p><strong>Ok, déjame consultar con un asesor para atenderte inmediatamente.</strong></p>
+                <p class="extra-small text-primary mb-0 mt-1">
+                  <em>[Seguridad]: El sistema no inventa inmuebles no catalogados. Envía alerta al WhatsApp de los asesores para atención personal.</em>
+                </p>
+              `,
+              alert: {
+                title: '¡Alerta Prioritaria Enviada!',
+                desc: 'WhatsApp de aviso enviado a Robert (+58 414 311 5105) para responder este caso.',
+                icon: 'bi-bell-fill'
+              },
+              delay: 800
+            };
+          }
+
+          // Apartamento La Boyera
+          if (q.includes('boyera') || q.includes('apto') || q.includes('apartamento')) {
+            return {
+              html: `
+                <p>Hola, bienvenido a Tu techo ideal ✨</p>
+                <p>Tenemos disponible en nuestro inventario:</p>
+                <p><strong>Apartamento en La Boyera (El Hatillo)</strong><br>
+                • <strong>Operación:</strong> Venta<br>
+                • <strong>Precio:</strong> US$ 160.000<br>
+                • <strong>Detalles:</strong> 125,90 m², 4 hab, 3 baños, 1 puesto, piso 14 con hermosa vista panorámica.</p>
+                <p>¿Te gustaría coordinar una visita presencial con Bárbara o Robert para conocerlo?</p>
+              `,
+              alert: null,
+              delay: 950
+            };
+          }
+
+          // Casa Alta Florida
+          if (q.includes('florida') || q.includes('casa')) {
+            return {
+              html: `
+                <p>Hola, bienvenido a Tu techo ideal ✨</p>
+                <p>Tenemos esta excelente opción:</p>
+                <p><strong>Casa Comercial en Alta Florida</strong><br>
+                • <strong>Operación:</strong> Alquiler (US$ 5.500) o Venta (US$ 600.000)<br>
+                • <strong>Detalles:</strong> 850 m² de terreno, múltiples oficinas, estacionamiento para 10+ vehículos.</p>
+                <p>¿Qué día te resulta cómodo para coordinar una visita?</p>
+              `,
+              alert: null,
+              delay: 950
+            };
+          }
+
+          // Casual / anti-gasto
+          if (q.includes('locura') || q.includes('jaja') || q.includes('caro') || q.includes('broma')) {
+            return {
+              html: `
+                <div class="p-2 rounded-3 bg-success-subtle text-success-emphasis border border-success-subtle small">
+                  <strong>🛡️ Ahorro Automático de Saldo</strong>
+                  <p class="mb-0 extra-small">El mensaje es charla casual. El sistema responde con amabilidad protegiendo tu presupuesto.</p>
+                </div>
+              `,
+              alert: null,
+              delay: 600
+            };
+          }
+
           return {
             html: `
-              <p><strong>Ok, déjame consultar con un asesor para atenderte inmediatamente.</strong></p>
-              <p style="font-size: 0.78rem; color: #a5b4fc; margin-top: 6px;">
-                ⚡ <em>[Sistema Blindado]: El bot no inventó propiedades ni pidió disculpas absurdas. Despachó alerta prioritaria y activó silencio de 24h para atención humana de Robert o Bárbara.</em>
-              </p>
+              <p>Hola, con gusto te orientamos. Contamos con propiedades en <strong>El Hatillo, Alta Florida, Macaracuay, Los Naranjos y Las Mercedes</strong>.</p>
+              <p>¿Buscas una opción para <strong>comprar</strong> o para <strong>alquilar</strong>?</p>
             `,
-            alert: true,
+            alert: null,
             delay: 900
           };
         }
-
-        // 2. Apartamento en La Boyera
-        if (q.includes('boyera') || (q.includes('apartamento') && q.includes('hatillo')) || q.includes('apto')) {
-          return {
-            html: `
-              <p>Hola, bienvenido a Tu techo ideal ✨</p>
-              <p>Tenemos disponible en nuestro inventario verificado:</p>
-              <p><strong>Apartamento en La Boyera (El Hatillo)</strong><br>
-              • <strong>Operación:</strong> Venta<br>
-              • <strong>Precio:</strong> US$ 160.000,00<br>
-              • <strong>Características:</strong> Penthouse a remodelar de 125,90 m², 4 habitaciones, 3 baños, 1 puesto, piso 14 con hermosa vista panorámica a la montaña.</p>
-              <p>¿Te gustaría coordinar una visita presencial con Bárbara Bravo o Robert Jiménez para conocerlo?</p>
-            `,
-            alert: false,
-            delay: 1100
-          };
-        }
-
-        // 3. Casa comercial en Alta Florida
-        if (q.includes('florida') || q.includes('alta florida') || q.includes('comercial')) {
-          return {
-            html: `
-              <p>Hola, bienvenido a Tu techo ideal ✨</p>
-              <p>Tenemos disponible esta excelente propiedad corporativa:</p>
-              <p><strong>Casa Comercial en Alta Florida (Libertador)</strong><br>
-              • <strong>Operación:</strong> Alquiler (US$ 5.500) o Venta (US$ 600.000)<br>
-              • <strong>Características:</strong> 850 m² de terreno, múltiples oficinas, estacionamiento para 10+ vehículos, ideal para sede corporativa o embajada.</p>
-              <p>¿Qué día te resulta cómodo para coordinar una visita presencial?</p>
-            `,
-            alert: false,
-            delay: 1100
-          };
-        }
-
-        // 4. Filtro determinístico anti-gasto
-        if (q.includes('locura') || q.includes('jaja') || q.includes('jeje') || q.includes('broma') || q.includes('muy caro') || q.includes('yo te aviso')) {
-          return {
-            html: `
-              <div style="background: rgba(16, 185, 129, 0.12); border-left: 3px solid #10b981; padding: 8px 12px; border-radius: 6px;">
-                <strong style="color: #34d399; font-size: 0.8rem;">🛡️ FILTRO ANTI-GASTO DETERMINÍSTICO ACTIVADO</strong>
-                <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">
-                  El mensaje fue detectado como charla casual o informal. El bot guarda <strong>silencio inteligente</strong> para proteger el presupuesto de tokens del cliente ($0.00 gastados en IA).
-                </p>
-              </div>
-            `,
-            alert: false,
-            delay: 600
-          };
-        }
-
-        // 5. Default Claude response
-        return {
-          html: `
-            <p>Hola, bienvenido a Tu techo ideal ✨</p>
-            <p>Con gusto te asesoramos. Tenemos propiedades activas en <strong>El Hatillo, Alta Florida, Macaracuay, Los Naranjos y Las Mercedes</strong>.</p>
-            <p>¿Buscas una propiedad para <strong>comprar</strong> o para <strong>alquilar</strong>?</p>
-          `,
-          alert: false,
-          delay: 1000
-        };
       }
     },
 
     'nexus-b2b': {
-      title: 'Nexus Lead Scorer IA',
-      status: 'Kommo CRM API v4 • Pipeline B2B',
+      category: 'Ventas B2B & CRM Kommo',
+      title: 'Nexus B2B Solutions',
+      subtitle: 'Calificador Automático de Prospectos y CRM',
       icon: '💼',
-      avatarGradient: 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)',
-      initialMsg: `
-        <p>Hola, bienvenido a Nexus Solutions 💼</p>
-        <p>Soy el Agente de Calificación Comercial y automatización CRM. Para brindarte la mejor asesoría, ¿cuántos ejecutivos o asesores forman tu equipo comercial actualmente?</p>
-      `,
-      chips: [
-        { label: '👥 Equipo de 8 asesores', msg: 'Somos un equipo comercial de 8 asesores' },
-        { label: '💰 Presupuesto $2,000 / mes', msg: 'Nuestro presupuesto disponible es de $2,000 para automatizar el CRM' },
-        { label: '⚡ Requerimos implementación urgente', msg: 'Necesitamos implementar el sistema urgente esta misma semana' },
-        { label: '💬 Solo estoy curioseando jaja', msg: 'solo estoy curioseando jaja a ver que tal' }
+      description: 'Entrevista al cliente en WhatsApp sobre su presupuesto, tamaño de equipo y urgencia. Califica si es un cliente listo para comprar y lo anota en tu CRM para que tus vendedores lo llamen de inmediato.',
+      benefits: [
+        { strong: 'Filtro de prospectos:', text: 'Tus vendedores solo dedican tiempo a clientes con presupuesto real.' },
+        { strong: 'Conexión a Kommo CRM:', text: 'Crea el negocio y asigna tareas al asesor correspondiente en 2 segundos.' },
+        { strong: '+60% más cierres:', text: 'Elimina las demoras en contactar a los leads más calificados.' }
       ],
-      alert: {
-        icon: '🎯',
-        title: '¡Lead B2B Caliente Registrado en Kommo CRM!',
-        desc: 'Lead calificado con 95/100 pts. Trato creado en "Prospectos Calientes" + Tarea asignada a asesor de guardia.'
-      },
-      process: (raw) => {
-        const q = raw.toLowerCase().trim();
-
-        // 1. Tamaño de equipo
-        if (q.includes('8') || q.includes('equipo') || q.includes('asesores') || q.includes('vendedores')) {
-          return {
-            html: `
-              <p>Excelente. Con un equipo de más de 5 asesores, implementar <strong>asignación inteligente Round-Robin en Kommo CRM</strong> reduce un 60% las demoras de respuesta.</p>
-              <p>¿Cuál es el canal principal donde reciben prospectos hoy? (WhatsApp, Instagram o pauta en Meta Ads)?</p>
-            `,
-            alert: false,
-            delay: 1000
-          };
-        }
-
-        // 2. Presupuesto
-        if (q.includes('presupuesto') || q.includes('2000') || q.includes('2,000') || q.includes('$') || q.includes('dolar')) {
-          return {
-            html: `
-              <p>Perfecto. Ese rango es óptimo para desplegar un <strong>Ecosistema Completo Depro Tech</strong>:</p>
-              <p>• Agente conversacional con Claude Sonnet 4.5<br>
-              • Webhooks de integración bidireccional con Kommo CRM<br>
-              • Filtros determinísticos anti-gasto y dashboard en tiempo real.</p>
-              <p>¿Tienen ya cuenta activa en Kommo o desean que configuremos las licencias y embudos desde cero?</p>
-            `,
-            alert: false,
-            delay: 1100
-          };
-        }
-
-        // 3. Urgente / Alta prioridad
-        if (q.includes('urgente') || q.includes('semana') || q.includes('inmediato') || q.includes('hoy')) {
-          return {
-            html: `
-              <p>Entendido. Por el alto nivel de urgencia, <strong>he calificado tu solicitud con Score Prioritario (95/100)</strong>.</p>
-              <p>Acabo de crear el Trato en Kommo en la etapa <em>"Cotización Prioritaria"</em> y notifiqué al director de ingeniería para coordinar una llamada técnica hoy mismo.</p>
-            `,
-            alert: true,
-            delay: 900
-          };
-        }
-
-        // 4. Casual
-        if (q.includes('curioseando') || q.includes('jaja') || q.includes('nada') || q.includes('locura')) {
-          return {
-            html: `
-              <div style="background: rgba(139, 92, 246, 0.12); border-left: 3px solid #8b5cf6; padding: 8px 12px; border-radius: 6px;">
-                <strong style="color: #c084fc; font-size: 0.8rem;">📊 LEAD SCORING DETERMINÍSTICO</strong>
-                <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">
-                  El prospecto fue clasificado con Score Informativo (Baja prioridad). No se generan llamadas salientes agresivas ni se desperdician recursos comerciales.
-                </p>
-              </div>
-            `,
-            alert: false,
-            delay: 600
-          };
-        }
-
-        return {
-          html: `
-            <p>Con gusto te orientamos. Cuéntanos: ¿cuál es el mayor desafío comercial que enfrenta tu empresa actualmente?</p>
-          `,
-          alert: false,
-          delay: 900
-        };
-      }
-    },
-
-    'fastcommerce': {
-      title: 'FastCommerce Express',
-      status: 'Catálogo & Pedidos • WhatsApp Checkout',
-      icon: '🛍️',
-      avatarGradient: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
-      initialMsg: `
-        <p>¡Hola! Bienvenido a FastGourmet Express 🛍️🍕</p>
-        <p>Soy tu asistente de pedidos automáticos. ¿Deseas consultar nuestro menú de hoy o armar un pedido para delivery/retiro?</p>
-      `,
-      chips: [
-        { label: '🍕 Combo Pizza Familiar + Bebida', msg: 'Quiero pedir el Combo Pizza Familiar con bebida' },
-        { label: '🥤 ¿Tienen opciones vegetarianas?', msg: '¿Tienen pizzas vegetarianas o sin gluten?' },
-        { label: '🛵 ¿Costo de delivery a Las Mercedes?', msg: '¿Cuánto cuesta el delivery hasta Las Mercedes?' },
-        { label: '💬 jaja qué rápido responde', msg: 'jaja qué rápido responde este bot' }
+      metrics: [
+        { val: '+60%', lbl: 'Cierres' },
+        { val: '2 seg', lbl: 'Anotado en CRM' },
+        { val: '100%', lbl: 'Calificados' }
       ],
-      alert: {
-        icon: '🛵',
-        title: '¡Orden #4920 Generada en Tiempo Real!',
-        desc: 'Pedido estructurado enviado a pantalla de cocina y link de pago enviado al cliente.'
+      waMessage: 'Hola Depro Tech, me interesa el sistema de calificación B2B y conexión con CRM para mi empresa.',
+      modal: {
+        challenge: 'Vendedores saturados atendiendo curiosos sin presupuesto, descuidando a los prospectos calificados con compra inmediata.',
+        solution: 'Cuestionario inteligente en WhatsApp que califica el interés y crea el negocio directamente en el CRM de la empresa.',
+        results: [
+          'Aumento del 60% en velocidad de respuesta comercial',
+          'Asignación automática y ordenada entre ejecutivos',
+          'Cero prospectos calientes desatendidos'
+        ]
       },
-      process: (raw) => {
-        const q = raw.toLowerCase().trim();
+      bot: {
+        title: 'Calificador B2B',
+        status: 'En línea • Nexus CRM Pipeline',
+        avatar: '💼',
+        greeting: `
+          <p>Hola, bienvenido a Nexus Solutions 💼</p>
+          <p>Soy el asistente comercial. Ayudamos a empresas a automatizar sus ventas con IA. Para darte la propuesta ideal, ¿cuántas personas forman tu equipo comercial actualmente?</p>
+        `,
+        chips: [
+          { label: '👥 Equipo de 8 personas', msg: 'Somos un equipo de 8 personas' },
+          { label: '💰 Presupuesto de $2,000', msg: 'Contamos con un presupuesto de $2,000' },
+          { label: '⚡ Necesitamos empezar ya', msg: 'Es urgente, queremos implementar esta semana' },
+          { label: '💬 Solo estoy mirando', msg: 'Solo estoy curioseando jaja' }
+        ],
+        respond: (raw) => {
+          const q = raw.toLowerCase().trim();
 
-        // 1. Combo Pizza
-        if (q.includes('combo') || q.includes('pizza') || q.includes('familiar') || q.includes('hambre')) {
+          if (q.includes('8') || q.includes('equipo') || q.includes('personas')) {
+            return {
+              html: `
+                <p>Excelente. Con un equipo de más de 5 personas, la <strong>asignación automática de prospectos</strong> evita que los leads queden sin responder.</p>
+                <p>¿Qué canal les genera más consultas actualmente: WhatsApp, Instagram o llamadas?</p>
+              `,
+              alert: null,
+              delay: 900
+            };
+          }
+
+          if (q.includes('presupuesto') || q.includes('2000') || q.includes('$')) {
+            return {
+              html: `
+                <p>Perfecto. Con ese presupuesto pueden acceder al <strong>Plan Completo de Automatización</strong> con bot en WhatsApp, conexión a CRM y alertas al equipo.</p>
+                <p>¿Tienen ya un CRM como Kommo o desean que lo configuremos desde cero?</p>
+              `,
+              alert: null,
+              delay: 900
+            };
+          }
+
+          if (q.includes('urgente') || q.includes('ya') || q.includes('semana')) {
+            return {
+              html: `
+                <p>Entendido. Por la alta prioridad, <strong>he calificado tu caso como Prospecto Caliente</strong>.</p>
+                <p>Acabo de generar la ficha en el CRM y notifiqué al consultor comercial para contactarte hoy mismo.</p>
+              `,
+              alert: {
+                title: '¡Prospecto Prioritario Anotado!',
+                desc: 'Lead calificado con alta urgencia. Asignado a ejecutivo comercial en Kommo CRM.',
+                icon: 'bi-check-circle-fill'
+              },
+              delay: 850
+            };
+          }
+
+          if (q.includes('curioseando') || q.includes('mirando') || q.includes('jaja')) {
+            return {
+              html: `
+                <div class="p-2 rounded-3 bg-light border small text-secondary">
+                  <strong>Segmentación Automática:</strong>
+                  <p class="mb-0 extra-small">Prospecto clasificado como informativo. Se le entrega material sin llamadas comerciales invasivas.</p>
+                </div>
+              `,
+              alert: null,
+              delay: 600
+            };
+          }
+
           return {
             html: `
-              <p>¡Excelente elección! 🍕</p>
-              <p><strong>Combo Familiar Express ($18.00):</strong><br>
-              • 1 Pizza Familiar (8 porciones) con 2 ingredientes a elección.<br>
-              • 1 Refresco 1.5L (Coca-Cola, Chinotto o Nestea).<br>
-              • Salsas artesanales de la casa incluidas.</p>
-              <p>¿Qué ingredientes prefieres: Pepperoni, Jamón, Champiñones, Maíz o Tocineta?</p>
+              <p>Con gusto te orientamos. Cuéntanos cuál es el principal cuello de botella de ventas en tu empresa actualmente.</p>
             `,
-            alert: false,
-            delay: 1000
-          };
-        }
-
-        // 2. Vegetarianas
-        if (q.includes('vegetariana') || q.includes('gluten') || q.includes('veggie')) {
-          return {
-            html: `
-              <p>¡Sí, por supuesto! 🌱</p>
-              <p>Contamos con nuestra <strong>Pizza Primavera Veggie ($14.00)</strong>:</p>
-              <p>Masa delgada, pomodoro artesanal, mozzarella vegetal, pimientos asados, champiñones frescos y toque de rúcula al salir del horno. 100% libre de carnes.</p>
-              <p>¿Te gustaría incluirla en tu orden?</p>
-            `,
-            alert: false,
-            delay: 1000
-          };
-        }
-
-        // 3. Delivery y pago
-        if (q.includes('delivery') || q.includes('mercedes') || q.includes('costo') || q.includes('envio') || q.includes('envío')) {
-          return {
-            html: `
-              <p>El delivery a <strong>Las Mercedes</strong> tiene una tarifa plana de <strong>$2.50</strong> (tiempo estimado: 25 a 35 min) 🛵.</p>
-              <p><strong>Resumen de tu pedido:</strong><br>
-              • Combo Familiar Express: $18.00<br>
-              • Costo de Delivery: $2.50<br>
-              • <strong>Total a pagar: $20.50</strong></p>
-              <p>¿Deseas pagar con Pago Móvil, Zelle o Tarjeta Internacional?</p>
-            `,
-            alert: true,
-            delay: 950
-          };
-        }
-
-        // 4. Casual
-        if (q.includes('rapido') || q.includes('rápido') || q.includes('jaja') || q.includes('gracias')) {
-          return {
-            html: `
-              <p>¡Gracias! Estamos programados para que jamás pases hambre esperando un menú. 😉 ¿Te gustaría que agreguemos algún postre o bebida adicional?</p>
-            `,
-            alert: false,
-            delay: 700
-          };
-        }
-
-        return {
-          html: `
-            <p>Con gusto te tomamos el pedido. Indícanos qué se te antoja hoy o dinos tu dirección para calcular el delivery exacto.</p>
-          `,
-          alert: false,
-          delay: 900
-        };
-      }
-    },
-
-    'sentinel': {
-      title: 'Sentinel 24/7 Support',
-      status: 'Mesa de Ayuda • RAG & Base de Conocimiento',
-      icon: '🎧',
-      avatarGradient: 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)',
-      initialMsg: `
-        <p>Hola, estás en el canal de Soporte y Asistencia de Sentinel Enterprise 🎧</p>
-        <p>Por favor indícame tu correo de usuario o el número de incidencia para orientarte de inmediato.</p>
-      `,
-      chips: [
-        { label: '🔑 Olvidé mi contraseña de acceso', msg: 'No puedo ingresar a mi cuenta, olvidé mi contraseña' },
-        { label: '💳 El cobro de mi suscripción falló', msg: 'El cobro de mi suscripción falló hoy con mi tarjeta' },
-        { label: '😡 Llevo 3 días esperando y nadie responde', msg: 'Llevo 3 días esperando y nadie responde, esto es inaceptable' },
-        { label: '💬 Hola buenos días', msg: 'Hola muy buenos días' }
-      ],
-      alert: {
-        icon: '🚨',
-        title: '¡Ticket Urgente #ST-892 Escala a Supervisor!',
-        desc: 'Sentimiento negativo detectado. Bot pausado y notificación push enviada a supervisor humano.'
-      },
-      process: (raw) => {
-        const q = raw.toLowerCase().trim();
-
-        // 1. Password reset
-        if (q.includes('contraseña') || q.includes('clave') || q.includes('acceso') || q.includes('password') || q.includes('entrar')) {
-          return {
-            html: `
-              <p><strong>Guía para Restablecer tu Acceso:</strong></p>
-              <p>1. Ingresa a tu panel en el botón <em>"¿Olvidaste tu contraseña?"</em>.<br>
-              2. Introduce el correo con el que te diste de alta.<br>
-              3. Te llegará un token de un solo uso con validez de 15 minutos.</p>
-              <p>Si no lo ves en tu bandeja principal, revisa la carpeta de <em>Promociones</em> o <em>Spam</em>. ¿Pudiste recibir el enlace?</p>
-            `,
-            alert: false,
-            delay: 1000
-          };
-        }
-
-        // 2. Cobro / facturación
-        if (q.includes('cobro') || q.includes('suscripcion') || q.includes('suscripción') || q.includes('tarjeta') || q.includes('pago')) {
-          return {
-            html: `
-              <p>Comprendo. Si el cobro de tu suscripción fue rechazado por el banco emisor:</p>
-              <p>• La plataforma cuenta con un período de gracia de <strong>72 horas</strong> sin interrumpir tus servicios.<br>
-              • Puedes actualizar o cambiar el método de pago desde <em>Ajustes > Facturación</em>.</p>
-              <p>¿Deseas que generemos un reintento manual en este instante?</p>
-            `,
-            alert: false,
-            delay: 1050
-          };
-        }
-
-        // 3. Frustración / Insatisfacción (Handoff prioritario)
-        if (q.includes('inaceptable') || q.includes('dias') || q.includes('días') || q.includes('esperando') || q.includes('rabia') || q.includes('estafa') || q.includes('nadie responde')) {
-          return {
-            html: `
-              <p>Lamento mucho los inconvenientes causados. <strong>He activado de inmediato el protocolo de escalamiento prioritario</strong>.</p>
-              <p>⚡ <em>[Handoff Humano]:</em> Se ha generado el <strong>Ticket Urgente #ST-892</strong> y el bot se ha silenciado. Un supervisor de operaciones tomará control directo de esta conversación en menos de 5 minutos.</p>
-            `,
-            alert: true,
+            alert: null,
             delay: 850
           };
         }
-
-        // 4. Saludo
-        if (q.includes('hola') || q.includes('buenos dias') || q.includes('buenos días')) {
-          return {
-            html: `
-              <p>¡Hola! Muy buenos días. Es un gusto atenderte. ¿En qué problema técnico o requerimiento sobre la plataforma podemos ayudarte hoy?</p>
-            `,
-            alert: false,
-            delay: 800
-          };
-        }
-
-        return {
-          html: `
-            <p>Entendido. He registrado tu consulta en nuestro sistema de soporte. ¿Deseas que verifiquemos el estatus con un analista técnico?</p>
-          `,
-          alert: false,
-          delay: 900
-        };
       }
-    }
-  };
-
-  // ==========================================================================
-  // PROJECT TECHNICAL SHEETS DATA (MODAL)
-  // ==========================================================================
-  const PROJECT_SHEETS = {
-    'techo-ideal': {
-      title: 'Tu Techo Ideal C.A.',
-      category: 'Inmobiliaria & Proptech de Lujo',
-      icon: '🏢',
-      challenge: 'Tu Techo Ideal recibía decenas de leads diarios por Instagram y WhatsApp a través de Wasi y redes sociales. El reto primordial era responder en menos de 3 segundos, evitar el abandono fuera de horario de oficina y blindar al sistema para que jamás inventara propiedades inexistentes o precios erróneos.',
-      solution: 'Diseñamos un microservicio Node.js en Render conectado bidireccionalmente con WhatsApp Cloud API, Instagram Direct y Google Sheets. El bot clasifica la intención con Claude Sonnet 4.5, responde únicamente con base en el inventario real y notifica inmediatamente al WhatsApp de Robert Jiménez y Bárbara Bravo ante oportunidades en caliente.',
-      flow: [
-        { num: '01', title: 'Recepción Multicanal', desc: 'Webhook recibe mensajes de WhatsApp e Instagram en menos de 200ms.' },
-        { num: '02', title: 'Filtro Determinístico & Mutex', desc: 'Debouncing de mensajes rápidos y bloqueo de gasto innecesario en charla casual.' },
-        { num: '03', title: 'Cerebro Claude Sonnet 4.5', desc: 'Validación estricta contra hoja de inventario sin inventar datos no listados.' },
-        { num: '04', title: 'Kommo CRM & WhatsApp Push', desc: 'Creación del lead y despacho de alerta prioritaria con link directo a los brokers.' }
-      ],
-      tech: ['Claude Sonnet 4.5', 'Kommo CRM API v4', 'Google Sheets API', 'WhatsApp Cloud API', 'Node.js & Express', 'Render Cloud'],
-      botKey: 'techo-ideal'
-    },
-
-    'nexus-b2b': {
-      title: 'Nexus B2B Solutions',
-      category: 'Automatización Comercial & Lead Scoring',
-      icon: '💼',
-      challenge: 'Empresas de servicios B2B pierden hasta el 40% de sus prospectos calificados por demorar horas en contactarlos y no saber priorizar cuáles leads cuentan con presupuesto y decisión inmediata frente a curiosos.',
-      solution: 'Implementamos un flujo interactivo que cualifica al prospecto en tiempo real según 3 variables críticas (volumen de equipo, presupuesto asignado y urgencia). Los leads de alta puntuación son creados automáticamente en Kommo CRM con tarea urgente, mientras que los informativos reciben seguimiento automatizado sin consumir tiempo de los asesores.',
-      flow: [
-        { num: '01', title: 'Captura de Prospecto', desc: 'Ingreso desde landing page o chat corporativo con detección de canal.' },
-        { num: '02', title: 'Entrevista Inteligente', desc: 'Preguntas estratégicas sobre equipo, urgencia y presupuesto.' },
-        { num: '03', title: 'Algoritmo de Lead Scoring', desc: 'Cálculo de puntaje de 1 a 100 y clasificación en Frío / Templado / Caliente.' },
-        { num: '04', title: 'Asignación Round-Robin en Kommo', desc: 'Creación de negocio y notificación push al asesor de ventas asignado.' }
-      ],
-      tech: ['Kommo CRM API v4', 'OpenAI GPT-4o', 'Lead Scoring Engine', 'Webhooks REST', 'Node.js Microservices', 'Make.com'],
-      botKey: 'nexus-b2b'
     },
 
     'fastcommerce': {
-      title: 'FastCommerce AI Express',
-      category: 'Retail & Delivery por WhatsApp',
+      category: 'Tiendas & Delivery',
+      title: 'FastCommerce Express',
+      subtitle: 'Toma de Pedidos y Catálogo por WhatsApp',
       icon: '🛍️',
-      challenge: 'Restaurantes y comercios minoristas colapsan sus líneas de WhatsApp en horas pico con pedidos manuales, cálculos errados de vuelto, demoras en cotizar el delivery y pérdida de ventas por fricción.',
-      solution: 'Desarrollamos un agente conversacional para toma de pedidos express. Consulta el catálogo en tiempo real, sugiere agregados estratégicos (upselling), calcula recargos por zona de despacho de forma automática y emite la orden formateada con datos de pago móvil o pasarela internacional.',
-      flow: [
-        { num: '01', title: 'Consulta de Menú / Catálogo', desc: 'Presentación de combos activos y disponibilidad de ingredientes en stock.' },
-        { num: '02', title: 'Personalización de Pedido', desc: 'Selección de ingredientes, bebidas y sugerencias cruzadas automáticas.' },
-        { num: '03', title: 'Cálculo de Zona & Delivery', desc: 'Suma de subtotales, empaque y tarifa de envío según sector geográfico.' },
-        { num: '04', title: 'Ticket de Despacho & Pago', desc: 'Generación de ticket estructurado para cocina y coordenadas bancarias.' }
+      description: 'Permite a tus clientes consultar el menú o catálogo, armar pedidos con ingredientes o tallas, calcular el delivery por zona y recibir la orden lista para pagar en menos de 2 minutos.',
+      benefits: [
+        { strong: 'Pedidos en 2 minutos:', text: 'Sin llamadas ni esperas en caja en horas pico.' },
+        { strong: 'Cálculo de delivery exacto:', text: 'Suma el precio del envío automáticamente según la dirección.' },
+        { strong: 'Venta sugerida:', text: 'Ofrece bebidas, postres o complementos aumentando el ticket promedio.' }
       ],
-      tech: ['WhatsApp Cloud API', 'PostgreSQL / Google Sheets', 'Claude AI Engine', 'Checkout Webhooks', 'Node.js', 'Express'],
-      botKey: 'fastcommerce'
+      metrics: [
+        { val: '2 min', lbl: 'Toma de Pedido' },
+        { val: '-70%', lbl: 'Carga en Caja' },
+        { val: '100%', lbl: 'Cálculo Exacto' }
+      ],
+      waMessage: 'Hola Depro Tech, me gustó el sistema de pedidos FastCommerce para mi negocio de comida/tienda.',
+      modal: {
+        challenge: 'Líneas de WhatsApp colapsadas en horas pico, clientes que abandonan por tardanza y errores al calcular cuentas manualmente.',
+        solution: 'Asistente de pedidos que toma la orden, suma adicionales, calcula el envío y entrega los datos de pago al instante.',
+        results: [
+          'Reducción del 70% del tiempo de atención por pedido',
+          'Cero errores en cuentas o ingredientes',
+          'Envío de orden directamente a pantalla de despacho'
+        ]
+      },
+      bot: {
+        title: 'Pedidos Express',
+        status: 'En línea • FastGourmet',
+        avatar: '🛍️',
+        greeting: `
+          <p>¡Hola! Bienvenido a FastGourmet Express 🛍️🍕</p>
+          <p>Soy tu asistente de pedidos automáticos. ¿Deseas ver las promociones de hoy o armar tu pedido para delivery?</p>
+        `,
+        chips: [
+          { label: '🍕 Combo Familiar + Bebida', msg: 'Quiero el Combo Familiar con bebida' },
+          { label: '🌱 ¿Tienen opciones vegetarianas?', msg: '¿Tienen opciones vegetarianas?' },
+          { label: '🛵 ¿Costo a Las Mercedes?', msg: '¿Cuánto cuesta el delivery a Las Mercedes?' },
+          { label: '💬 jaja qué rápido', msg: 'jaja qué rápido responde' }
+        ],
+        respond: (raw) => {
+          const q = raw.toLowerCase().trim();
+
+          if (q.includes('combo') || q.includes('familiar') || q.includes('pizza')) {
+            return {
+              html: `
+                <p>¡Excelente elección! 🍕</p>
+                <p><strong>Combo Familiar Express ($18.00):</strong><br>
+                • 1 Pizza Familiar (8 porciones) con 2 ingredientes.<br>
+                • 1 Refresco 1.5L frío.<br>
+                • Salsas de la casa incluidas.</p>
+                <p>¿Qué ingredientes prefieres: Jamón, Pepperoni, Champiñones o Maíz?</p>
+              `,
+              alert: null,
+              delay: 900
+            };
+          }
+
+          if (q.includes('vegetariana') || q.includes('veggie') || q.includes('carne')) {
+            return {
+              html: `
+                <p>¡Sí, claro! 🌱</p>
+                <p>Nuestra <strong>Pizza Primavera Veggie ($14.00)</strong> viene con mozzarella vegetal, champiñones, pimientos y rúcula fresca. 100% sin carnes.</p>
+                <p>¿Deseas agregarla a tu pedido?</p>
+              `,
+              alert: null,
+              delay: 900
+            };
+          }
+
+          if (q.includes('delivery') || q.includes('mercedes') || q.includes('costo')) {
+            return {
+              html: `
+                <p>El delivery a <strong>Las Mercedes</strong> cuesta <strong>$2.50</strong> (llega en 25 a 35 min) 🛵.</p>
+                <p><strong>Resumen de tu cuenta:</strong><br>
+                • Combo Familiar: $18.00<br>
+                • Delivery: $2.50<br>
+                • <strong>Total a pagar: $20.50</strong></p>
+                <p>¿Prefieres pagar con Pago Móvil, Zelle o Efectivo?</p>
+              `,
+              alert: {
+                title: '¡Orden #4920 Lista para Despacho!',
+                desc: 'Pedido armado con total y zona calculada. Listo para confirmación de pago.',
+                icon: 'bi-bag-check-fill'
+              },
+              delay: 850
+            };
+          }
+
+          if (q.includes('rapido') || q.includes('rápido') || q.includes('jaja')) {
+            return {
+              html: `
+                <p>¡Gracias! La meta es que no pases hambre esperando un menú. 😉 ¿Te gustaría que agreguemos algún postre a tu orden?</p>
+              `,
+              alert: null,
+              delay: 600
+            };
+          }
+
+          return {
+            html: `
+              <p>Con gusto te tomamos la orden. Indícanos qué te gustaría pedir hoy o dinos tu dirección para cotizarte el delivery.</p>
+            `,
+            alert: null,
+            delay: 850
+          };
+        }
+      }
     },
 
     'sentinel': {
+      category: 'Soporte 24/7 & Asistencia',
       title: 'Sentinel 24/7 Support',
-      category: 'Soporte Corporativo & Helpdesk',
+      subtitle: 'Mesa de Ayuda y Preguntas Frecuentes',
       icon: '🎧',
-      challenge: 'Mesas de ayuda saturadas con preguntas repetitivas sobre claves, facturación y manuales, impidiendo que el equipo humano atienda incidencias críticas y provocando frustración en clientes importantes.',
-      solution: 'Creamos un agente de soporte de Nivel 1 respaldado por arquitectura RAG (Retrieval-Augmented Generation). El sistema responde únicamente con base en manuales y políticas certificadas, e incorpora un analizador de sentimiento para transferir inmediatamente a supervisores humanos con historial completo si detecta molestia.',
-      flow: [
-        { num: '01', title: 'Identificación de Cuenta', desc: 'Validación de usuario o número de ticket en base de datos de clientes.' },
-        { num: '02', title: 'RAG en Base de Conocimiento', desc: 'Búsqueda semántica en manuales oficiales con cero invento de soluciones.' },
-        { num: '03', title: 'Análisis de Sentimiento IA', desc: 'Detección en tiempo real de frustración, urgencia o insatisfacción.' },
-        { num: '04', title: 'Handoff Silencioso o Ticket Urgente', desc: 'Cierre del caso o escalamiento a supervisor con alerta push prioritaria.' }
+      description: 'Responde dudas frecuentes sobre contraseñas, pagos y horarios basándose en tus manuales. Si un cliente está frustrado o necesita ayuda humana, le pasa el caso a tu equipo inmediatamente.',
+      benefits: [
+        { strong: 'Resuelve el 80% de dudas:', text: 'Preguntas repetitivas respondidas al segundo sin cargar a tu personal.' },
+        { strong: 'Cero respuestas erradas:', text: 'Solo responde lo que está certificado en tus políticas de atención.' },
+        { strong: 'Pase a humano inteligente:', text: 'Detecta cuando el caso requiere atención especial de un supervisor.' }
       ],
-      tech: ['RAG Vectorial', 'Claude 3.5 Sonnet', 'Sentimiento IA', 'Zendesk / Kommo Integration', 'Node.js', 'Express'],
-      botKey: 'sentinel'
+      metrics: [
+        { val: '80%', lbl: 'Dudas Resueltas' },
+        { val: '< 5 min', lbl: 'Pase a Humano' },
+        { val: '24/7', lbl: 'Disponibilidad' }
+      ],
+      waMessage: 'Hola Depro Tech, quiero automatizar el soporte al cliente de mi empresa con Sentinel 24/7.',
+      modal: {
+        challenge: 'Equipos de soporte desbordados respondiendo lo mismo cientos de veces al día y clientes molestos por lentitud.',
+        solution: 'Bot de asistencia de primer nivel con pase a supervisor humano cuando detecta molestia o situaciones complejas.',
+        results: [
+          '80% de las consultas resueltas sin intervención humana',
+          'Tiempo de espera reducido de horas a segundos',
+          'Historial ordenado para cuando interviene un asesor'
+        ]
+      },
+      bot: {
+        title: 'Soporte y Ayuda',
+        status: 'En línea • Asistencia Sentinel',
+        avatar: '🎧',
+        greeting: `
+          <p>Hola, estás en el canal de Soporte y Asistencia 🎧</p>
+          <p>¿En qué podemos ayudarte hoy? Indícanos tu consulta técnica o duda sobre tu cuenta.</p>
+        `,
+        chips: [
+          { label: '🔑 Olvidé mi contraseña', msg: 'Olvidé mi contraseña de acceso' },
+          { label: '💳 Mi pago falló', msg: 'El cobro de mi mensualidad falló hoy' },
+          { label: '😡 Llevo 3 días esperando', msg: 'Llevo 3 días esperando y nadie responde' },
+          { label: '💬 Hola buenos días', msg: 'Hola buenos días' }
+        ],
+        respond: (raw) => {
+          const q = raw.toLowerCase().trim();
+
+          if (q.includes('contraseña') || q.includes('clave') || q.includes('acceso')) {
+            return {
+              html: `
+                <p><strong>Para restablecer tu contraseña:</strong></p>
+                <p>1. Ve a la pantalla de ingreso y toca <em>"¿Olvidaste tu contraseña?"</em>.<br>
+                2. Coloca tu correo registrado.<br>
+                3. Recibirás un enlace seguro con validez de 15 minutos.</p>
+                <p>Si no lo ves en tu bandeja, revisa la carpeta de Spam. ¿Pudiste recibirlo?</p>
+              `,
+              alert: null,
+              delay: 900
+            };
+          }
+
+          if (q.includes('pago') || q.includes('falló') || q.includes('tarjeta') || q.includes('cobro')) {
+            return {
+              html: `
+                <p>Entendido. Si el cobro de tu tarjeta falló:</p>
+                <p>• Tu cuenta tiene un <strong>plazo de gracia de 72 horas</strong> sin suspender tu servicio.<br>
+                • Puedes actualizar tu método de pago ingresando en <em>Configuración > Facturación</em>.</p>
+                <p>¿Deseas que reintentemos el cobro de inmediato?</p>
+              `,
+              alert: null,
+              delay: 950
+            };
+          }
+
+          if (q.includes('esperando') || q.includes('días') || q.includes('dias') || q.includes('nadie responde') || q.includes('estafa')) {
+            return {
+              html: `
+                <p>Lamento mucho la demora ocasionada. <strong>He activado atención prioritaria en este momento</strong>.</p>
+                <p>He abierto el <strong>Ticket Urgente #ST-892</strong> y silencié el bot. Un supervisor de soporte tomará esta conversación en menos de 5 minutos.</p>
+              `,
+              alert: {
+                title: '¡Pase a Humano Activado!',
+                desc: 'Caso escalado con alta prioridad. Notificación enviada al supervisor de turno.',
+                icon: 'bi-exclamation-triangle-fill'
+              },
+              delay: 800
+            };
+          }
+
+          if (q.includes('hola') || q.includes('buenos')) {
+            return {
+              html: `
+                <p>¡Hola! Muy buenos días. Es un gusto saludarte. ¿En qué duda sobre la plataforma podemos ayudarte hoy?</p>
+              `,
+              alert: null,
+              delay: 600
+            };
+          }
+
+          return {
+            html: `
+              <p>Entendido. He registrado tu consulta. ¿Deseas que te pongamos en contacto con un asesor de soporte?</p>
+            `,
+            alert: null,
+            delay: 850
+          };
+        }
+      }
     }
   };
 
@@ -528,7 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typingEl) typingEl.remove();
   }
 
-  function appendBotMessage(htmlContent, delayMs = 1000, isAlert = false) {
+  function appendBotMessage(htmlContent, delayMs = 900, alertData = null) {
     showTypingIndicator();
 
     setTimeout(() => {
@@ -544,94 +557,152 @@ document.addEventListener('DOMContentLoaded', () => {
       chatBody.appendChild(msgEl);
       scrollToBottom();
 
-      const bot = BOTS[currentBotKey];
-      if (isAlert && bot.alert) {
-        alertIcon.textContent = bot.alert.icon || '🚨';
-        alertTitle.textContent = bot.alert.title;
-        alertDesc.textContent = bot.alert.desc;
-        alertBanner.classList.add('show');
+      if (alertData) {
+        simAlertTitle.textContent = alertData.title;
+        simAlertDesc.textContent = alertData.desc;
+        simAlertIcon.className = `bi ${alertData.icon || 'bi-bell-fill'} fs-6`;
+        simAlertBanner.classList.remove('d-none');
       } else {
-        alertBanner.classList.remove('show');
+        simAlertBanner.classList.add('d-none');
       }
     }, delayMs);
   }
 
   // ==========================================================================
-  // SWITCH BOT IN SIMULATOR
+  // SWITCH ACTIVE PROJECT (CHANGES EVERYTHING IN THE SAME SCREEN)
   // ==========================================================================
-  function switchBot(botKey, smoothScroll = false) {
-    if (!BOTS[botKey]) return;
-    currentBotKey = botKey;
-    const bot = BOTS[botKey];
+  function selectProject(key, shouldScroll = false) {
+    const data = PROJECTS_DATA[key];
+    if (!data) return;
 
-    // Update Simulator Header
+    activeProjectKey = key;
+
+    // 1. Update Left Card Info
+    projectTitle.textContent = data.title;
+    projectSubtitle.textContent = data.subtitle;
+    projectMainIcon.textContent = data.icon;
+    projectDescription.textContent = data.description;
+
+    // Benefits list
+    projectBenefitsList.innerHTML = '';
+    data.benefits.forEach(b => {
+      const li = document.createElement('li');
+      li.className = 'd-flex align-items-start gap-2 small text-secondary';
+      li.innerHTML = `
+        <i class="bi bi-check-circle-fill text-success fs-6 mt-0"></i>
+        <span><strong>${b.strong}</strong> ${b.text}</span>
+      `;
+      projectBenefitsList.appendChild(li);
+    });
+
+    // Metrics
+    metric1Val.textContent = data.metrics[0].val;
+    metric1Lbl.textContent = data.metrics[0].lbl;
+    metric2Val.textContent = data.metrics[1].val;
+    metric2Lbl.textContent = data.metrics[1].lbl;
+    metric3Val.textContent = data.metrics[2].val;
+    metric3Lbl.textContent = data.metrics[2].lbl;
+
+    // WhatsApp link prefilled
+    btnProjectWa.href = `https://wa.me/584143115105?text=${encodeURIComponent(data.waMessage)}`;
+
+    // Update Modal Data
+    modalProjectIcon.textContent = data.icon;
+    modalProjectCategory.textContent = data.category;
+    modalProjectTitle.textContent = data.title;
+    modalProjectChallenge.textContent = data.modal.challenge;
+    modalProjectSolution.textContent = data.modal.solution;
+    modalProjectResults.innerHTML = '';
+    data.modal.results.forEach(res => {
+      const rLi = document.createElement('li');
+      rLi.innerHTML = `✓ ${res}`;
+      modalProjectResults.appendChild(rLi);
+    });
+
+    // 2. Update Phone Simulator Header & Bot
+    const bot = data.bot;
     simBotTitle.textContent = bot.title;
     simBotStatus.textContent = bot.status;
-    simAvatarIcon.textContent = bot.icon;
-    simAvatar.style.background = bot.avatarGradient;
+    simAvatar.textContent = bot.avatar;
 
     // Reset Chat Messages
     chatBody.innerHTML = `
       <div class="chat-msg bot">
         <div class="msg-bubble">
-          ${bot.initialMsg}
+          ${bot.greeting}
           <span class="msg-time">${getCurrentTime()}</span>
         </div>
       </div>
     `;
 
     // Hide Alert Banner
-    alertBanner.classList.remove('show');
+    simAlertBanner.classList.add('d-none');
 
     // Update Preset Chips
     chipsContainer.innerHTML = '';
     bot.chips.forEach(chip => {
       const btn = document.createElement('button');
-      btn.className = 'chip';
+      btn.type = 'button';
+      btn.className = 'chip-btn';
       btn.textContent = chip.label;
-      btn.setAttribute('data-msg', chip.msg);
       btn.addEventListener('click', () => {
         appendUserMessage(chip.msg);
-        processIncomingUserMessage(chip.msg);
+        handleUserMessage(chip.msg);
       });
       chipsContainer.appendChild(btn);
     });
 
-    // Update Bot Selector Pills active state
-    botSelectorBtns.forEach(btn => {
-      if (btn.getAttribute('data-bot') === botKey) {
-        btn.classList.add('active');
+    // Clear text input
+    chatInput.value = '';
+
+    // Update Tab active classes
+    catalogTabs.forEach(tab => {
+      if (tab.getAttribute('data-project') === key) {
+        tab.classList.add('active');
       } else {
-        btn.classList.remove('active');
+        tab.classList.remove('active');
       }
     });
 
-    // Clear input
-    chatInput.value = '';
-
-    // Scroll to simulator if requested
-    if (smoothScroll) {
-      const simSection = document.getElementById('simulador');
-      if (simSection) {
-        simSection.scrollIntoView({ behavior: 'smooth' });
+    // Optional scroll to simulator (for mobile view)
+    if (shouldScroll) {
+      const simEl = document.getElementById('simulador');
+      if (simEl) {
+        simEl.scrollIntoView({ behavior: 'smooth' });
       }
-      phoneMockup.classList.remove('highlight-pulse');
-      void phoneMockup.offsetWidth; // Trigger reflow
-      phoneMockup.classList.add('highlight-pulse');
     }
   }
 
-  function processIncomingUserMessage(text) {
-    const bot = BOTS[currentBotKey];
-    if (!bot || !bot.process) return;
+  function handleUserMessage(text) {
+    const project = PROJECTS_DATA[activeProjectKey];
+    if (!project || !project.bot.respond) return;
 
-    const result = bot.process(text);
-    appendBotMessage(result.html, result.delay || 1000, !!result.alert);
+    const result = project.bot.respond(text);
+    appendBotMessage(result.html, result.delay || 900, result.alert);
   }
 
   // ==========================================================================
-  // EVENT LISTENERS: CHAT FORM & CONTROLS
+  // EVENT LISTENERS
   // ==========================================================================
+  catalogTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const key = tab.getAttribute('data-project');
+      if (key) selectProject(key, false);
+    });
+  });
+
+  btnFocusSim.addEventListener('click', () => {
+    const simEl = document.getElementById('simulador');
+    if (simEl) {
+      simEl.scrollIntoView({ behavior: 'smooth' });
+      chatInput.focus();
+    }
+  });
+
+  btnResetChat.addEventListener('click', () => {
+    selectProject(activeProjectKey, false);
+  });
+
   chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const text = chatInput.value.trim();
@@ -639,132 +710,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     appendUserMessage(text);
     chatInput.value = '';
-    processIncomingUserMessage(text);
+    handleUserMessage(text);
   });
 
-  btnReset.addEventListener('click', () => {
-    switchBot(currentBotKey, false);
-  });
-
-  botSelectorBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const botKey = btn.getAttribute('data-bot');
-      if (botKey) switchBot(botKey, false);
-    });
-  });
-
-  // Buttons on Project Cards ("Probar Simulador")
-  document.querySelectorAll('.btn-load-bot').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const botKey = btn.getAttribute('data-bot');
-      if (botKey) {
-        switchBot(botKey, true);
-      }
-    });
-  });
-
-  // ==========================================================================
-  // REPERTOIRE CATEGORY FILTERS
-  // ==========================================================================
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue || category === 'all') {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // ==========================================================================
-  // MODAL LOGIC (FICHA TÉCNICA)
-  // ==========================================================================
-  function openProjectModal(projectKey) {
-    const data = PROJECT_SHEETS[projectKey];
-    if (!data) return;
-
-    activeModalProjectKey = projectKey;
-    modalIcon.textContent = data.icon;
-    modalCategory.textContent = data.category;
-    modalTitle.textContent = data.title;
-    modalChallenge.textContent = data.challenge;
-    modalSolution.textContent = data.solution;
-
-    // Render flow
-    modalFlow.innerHTML = '';
-    data.flow.forEach(step => {
-      const stepEl = document.createElement('div');
-      stepEl.className = 'modal-flow-step';
-      stepEl.innerHTML = `
-        <div class="flow-step-num">${step.num}</div>
-        <div class="flow-step-text">
-          <strong>${step.title}</strong>
-          <span>${step.desc}</span>
-        </div>
-      `;
-      modalFlow.appendChild(stepEl);
-    });
-
-    // Render tech
-    modalTech.innerHTML = '';
-    data.tech.forEach(t => {
-      const pill = document.createElement('span');
-      pill.textContent = t;
-      modalTech.appendChild(pill);
-    });
-
-    // Show modal
-    modalOverlay.classList.add('open');
-    modalOverlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeProjectModal() {
-    modalOverlay.classList.remove('open');
-    modalOverlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  // Open modal buttons
-  document.querySelectorAll('.btn-open-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const projectKey = btn.getAttribute('data-project');
-      if (projectKey) openProjectModal(projectKey);
-    });
-  });
-
-  btnCloseModal.addEventListener('click', closeProjectModal);
-
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      closeProjectModal();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
-      closeProjectModal();
-    }
-  });
-
-  btnModalTestAction.addEventListener('click', () => {
-    const data = PROJECT_SHEETS[activeModalProjectKey];
-    closeProjectModal();
-    if (data && data.botKey) {
-      switchBot(data.botKey, true);
-    }
-  });
-
-  // ==========================================================================
-  // INITIALIZE FIRST BOT (Tu Techo Ideal)
-  // ==========================================================================
-  switchBot('techo-ideal', false);
+  // Initialize with Tu Techo Ideal
+  selectProject('techo-ideal', false);
 });
